@@ -1,3 +1,3 @@
 # DoomCloneC#
 
-Doom Clone made in godot engine 4.5 and recently switched to godot version 4.6
+Doom Clone everything is used for learning purposes I do not intend or publish this project with copyright art.
