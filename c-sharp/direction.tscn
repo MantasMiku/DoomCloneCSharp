@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6py2g27hrxtt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6820d"]
+albedo_color = Color(0, 1, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j5sff"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mgmir"]
+albedo_color = Color(0, 0, 1, 1)
+
+[node name="Direction" type="Node3D"]
+
+[node name="Y" type="CSGCylinder3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 2, 0, 0, 0, 0.2, 0, 2, 0)
+material_override = SubResource("StandardMaterial3D_6820d")
+
+[node name="X" type="CSGCylinder3D" parent="."]
+transform = Transform3D(-8.742277e-09, 1.9999999, 0, -0.2, -8.742278e-08, 0, 0, 0, 0.19999999, 2, 0, 0)
+material_override = SubResource("StandardMaterial3D_j5sff")
+
+[node name="Z" type="CSGCylinder3D" parent="."]
+transform = Transform3D(0.19999999, 0, 0, 0, -8.742278e-08, -0.2, 0, 1.9999999, -8.742277e-09, 0, 0, 2)
+material_override = SubResource("StandardMaterial3D_mgmir")

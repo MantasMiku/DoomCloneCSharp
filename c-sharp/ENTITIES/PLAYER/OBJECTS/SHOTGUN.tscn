@@ -1,0 +1,88 @@
+[gd_scene load_steps=10 format=3 uid="uid://j33a20u6k0xe"]
+
+[ext_resource type="Script" uid="uid://ccqvivi5lix7i" path="res://ENTITIES/PLAYER/OBJECTS/Shotgun.cs" id="1_t3rdo"]
+[ext_resource type="Texture2D" uid="uid://dybyixfeqnyn7" path="res://GRAPHICS/SPRITES/WEAPONS/shtga0.png" id="2_3ifde"]
+[ext_resource type="Texture2D" uid="uid://b7s08o3h8g6bf" path="res://GRAPHICS/SPRITES/WEAPONS/shtgb0.png" id="3_yyx56"]
+[ext_resource type="Texture2D" uid="uid://bmn1ij7rr8obu" path="res://GRAPHICS/SPRITES/WEAPONS/shtgc0.png" id="4_1nlv7"]
+[ext_resource type="Texture2D" uid="uid://dlxyipqxs6xfc" path="res://GRAPHICS/SPRITES/WEAPONS/shtgd0.png" id="5_10xib"]
+[ext_resource type="Texture2D" uid="uid://bq28t63nllygr" path="res://GRAPHICS/SPRITES/WEAPONS/shtfa0.png" id="6_xb6f4"]
+[ext_resource type="Texture2D" uid="uid://bwlqfc3r74qcf" path="res://GRAPHICS/SPRITES/WEAPONS/shtfb0.png" id="7_8gkhe"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_niqlo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3ifde")
+}],
+"loop": false,
+"name": &"IDLE",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_yyx56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1nlv7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_10xib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_yyx56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_3ifde")
+}],
+"loop": false,
+"name": &"RELOAD",
+"speed": 8.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wh8ld"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_xb6f4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8gkhe")
+}],
+"loop": false,
+"name": &"FIRE",
+"speed": 10.0
+}]
+
+[node name="SHOTGUN" type="Node3D"]
+script = ExtResource("1_t3rdo")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="GUN" type="AnimatedSprite2D" parent="CenterContainer"]
+texture_filter = 1
+position = Vector2(116, 0)
+rotation = -3.1415925
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_niqlo")
+animation = &"IDLE"
+centered = false
+flip_h = true
+flip_v = true
+
+[node name="FIRE" type="AnimatedSprite2D" parent="CenterContainer"]
+texture_filter = 1
+position = Vector2(5, -172)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_wh8ld")
+animation = &"FIRE"
+frame_progress = 0.74880064
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+target_position = Vector3(0, 0, -100)

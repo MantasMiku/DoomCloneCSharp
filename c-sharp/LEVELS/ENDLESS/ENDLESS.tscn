@@ -1,0 +1,67 @@
+[gd_scene load_steps=10 format=3 uid="uid://crgnn1eehxov6"]
+
+[ext_resource type="Texture2D" uid="uid://ci7v0680dsp5x" path="res://GRAPHICS/FLATS/flat10.png" id="1_7586n"]
+[ext_resource type="PackedScene" uid="uid://c20fehds6jx62" path="res://ENTITIES/PLAYER/test_player.tscn" id="2_7p7tj"]
+[ext_resource type="PackedScene" uid="uid://dcn6c7iehrjjc" path="res://ENTITIES/ENEMIES/SPIDER/spider.tscn" id="3_ouihv"]
+[ext_resource type="PackedScene" uid="uid://ur3vr1keonne" path="res://LEVELS/UI/InGameUI.tscn" id="4_3t4w1"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7586n"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_7p7tj"]
+sky_material = SubResource("ProceduralSkyMaterial_7586n")
+
+[sub_resource type="Environment" id="Environment_ouihv"]
+background_mode = 2
+sky = SubResource("Sky_7p7tj")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_ouihv"]
+vertices = PackedVector3Array(-99.5, 1, -99.5, -99.5, 1, 99.5, 99.5, 1, 99.5, 99.5, 1, -99.5)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7p7tj"]
+albedo_texture = ExtResource("1_7586n")
+uv1_scale = Vector3(100, 100, 1)
+
+[node name="Node" type="Node"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ouihv")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="TestPlayer" parent="." instance=ExtResource("2_7p7tj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 86.24872)
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_ouihv")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D"]
+material_override = SubResource("StandardMaterial3D_7p7tj")
+use_collision = true
+size = Vector3(200, 1, 200)
+
+[node name="SPIDER" parent="." instance=ExtResource("3_ouihv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.052452, 0.50001526, -10.365921)
+
+[node name="SPIDER2" parent="." instance=ExtResource("3_ouihv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.98214, 0.5, -62.69519)
+
+[node name="SPIDER3" parent="." instance=ExtResource("3_ouihv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 82.18215, 0.50001526, -78.39868)
+
+[node name="SPIDER4" parent="." instance=ExtResource("3_ouihv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 86.910645, 0.5, -0.06391144)
+
+[node name="SPIDER5" parent="." instance=ExtResource("3_ouihv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.975708, 0.50001526, -17.703392)
+
+[node name="SPIDER6" parent="." instance=ExtResource("3_ouihv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.9859, 0.50001526, -71.02721)
+
+[node name="InGameUI" parent="." instance=ExtResource("4_3t4w1")]

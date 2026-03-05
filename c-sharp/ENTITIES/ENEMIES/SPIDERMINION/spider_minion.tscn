@@ -1,0 +1,338 @@
+[gd_scene load_steps=52 format=3 uid="uid://dj3p1ilblkfxs"]
+
+[ext_resource type="Script" uid="uid://rf756elbxaou" path="res://ENTITIES/ENEMIES/SPIDERMINION/SpiderMinion.cs" id="1_6obow"]
+[ext_resource type="Texture2D" uid="uid://bhim5u1l62i8f" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspig1.png" id="1_7j7dw"]
+[ext_resource type="Texture2D" uid="uid://cwyxuejua8wyk" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspih1.png" id="2_52ejq"]
+[ext_resource type="Texture2D" uid="uid://bfwjug8sjsxbr" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspig2g8.png" id="3_jy45n"]
+[ext_resource type="Texture2D" uid="uid://xne3crgqm3wh" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspih2h8.png" id="4_jd026"]
+[ext_resource type="Texture2D" uid="uid://cg4x8o53dpjh2" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspig3g7.png" id="5_swhiq"]
+[ext_resource type="Texture2D" uid="uid://do1wqupvc4nsf" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspih3h7.png" id="6_gik5k"]
+[ext_resource type="Texture2D" uid="uid://ddwo722uou38s" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspig4g6.png" id="7_4hn27"]
+[ext_resource type="Texture2D" uid="uid://dnqxbmlfa7bxv" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspih4h6.png" id="8_thxyc"]
+[ext_resource type="Texture2D" uid="uid://btw6tsf3wnoxv" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspig5.png" id="9_lhe8w"]
+[ext_resource type="Texture2D" uid="uid://ut2qany46wev" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspih5.png" id="10_nqun7"]
+[ext_resource type="Texture2D" uid="uid://c5r0vk2n4qtoy" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspij0.png" id="11_11ob6"]
+[ext_resource type="Texture2D" uid="uid://4iur4uq81h1t" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspik0.png" id="12_oqv06"]
+[ext_resource type="Texture2D" uid="uid://clog0aa3cncgj" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspil0.png" id="13_i7xbo"]
+[ext_resource type="Texture2D" uid="uid://bovddr83whsjo" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspim0.png" id="14_yi4cn"]
+[ext_resource type="Texture2D" uid="uid://c4g57genurg03" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspin0.png" id="15_5narx"]
+[ext_resource type="Texture2D" uid="uid://d3rwg47r8e6jh" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspio0.png" id="16_wvfdj"]
+[ext_resource type="Texture2D" uid="uid://ctnnhveq3spb3" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspip0.png" id="17_olnbw"]
+[ext_resource type="Texture2D" uid="uid://lk8431t02j3r" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspii1.png" id="18_46gjl"]
+[ext_resource type="Texture2D" uid="uid://cn5l2gd1wpfxh" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspii2.png" id="19_x445p"]
+[ext_resource type="Texture2D" uid="uid://c04tdlin4ryux" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspii3.png" id="20_k8hyi"]
+[ext_resource type="Texture2D" uid="uid://c75g877lt38h5" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspii4.png" id="21_pxuuc"]
+[ext_resource type="Texture2D" uid="uid://dpewbweldl1w5" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspii5.png" id="22_3n5uj"]
+[ext_resource type="Texture2D" uid="uid://jtuuedu57gq8" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspia1d1.png" id="23_pyuoe"]
+[ext_resource type="Texture2D" uid="uid://ru8w8kn73qu6" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspib1e1.png" id="24_oiec7"]
+[ext_resource type="Texture2D" uid="uid://bjxp28ooyaa0t" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspic1f1.png" id="25_ofboa"]
+[ext_resource type="Texture2D" uid="uid://vhftorlxmskr" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspia2a8.png" id="26_bq128"]
+[ext_resource type="Texture2D" uid="uid://h7jji12w4db6" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspib2b8.png" id="27_2aq8w"]
+[ext_resource type="Texture2D" uid="uid://dkkevl3ellsrp" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspic2c8.png" id="28_4w8vw"]
+[ext_resource type="Texture2D" uid="uid://cuuknu0ouisuq" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspid2d8.png" id="29_rfooa"]
+[ext_resource type="Texture2D" uid="uid://1a0cpi3jnm7s" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspie2e8.png" id="30_1x47d"]
+[ext_resource type="Texture2D" uid="uid://bh6ko0ti1pww6" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspif2f8.png" id="31_2nlug"]
+[ext_resource type="Texture2D" uid="uid://dwj6j5dgqw065" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspia3a7.png" id="32_5h775"]
+[ext_resource type="Texture2D" uid="uid://qb6uflxgytws" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspib3b7.png" id="33_a0qt1"]
+[ext_resource type="Texture2D" uid="uid://8ixh72577knh" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspic3c7.png" id="34_54cql"]
+[ext_resource type="Texture2D" uid="uid://py26mm5avi5f" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspid3d7.png" id="35_liv3t"]
+[ext_resource type="Texture2D" uid="uid://c1i4yp2owtdj1" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspie3e7.png" id="36_a7fl7"]
+[ext_resource type="Texture2D" uid="uid://dqobshc6i6j0r" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspif3f7.png" id="37_m7oav"]
+[ext_resource type="Texture2D" uid="uid://buvaqwtk4cwm3" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspia4a6.png" id="38_p70gc"]
+[ext_resource type="Texture2D" uid="uid://dqfo22r2kf2kb" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspib4b6.png" id="39_qskwj"]
+[ext_resource type="Texture2D" uid="uid://bkncnf5rs3lgv" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspic4c6.png" id="40_c7m5t"]
+[ext_resource type="Texture2D" uid="uid://dmdjjusb42koa" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspid4d6.png" id="41_htq58"]
+[ext_resource type="Texture2D" uid="uid://qy38v12keov6" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspie4e6.png" id="42_1t6vv"]
+[ext_resource type="Texture2D" uid="uid://72hx4o6o6s7n" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspif4f6.png" id="43_wc7e3"]
+[ext_resource type="Texture2D" uid="uid://cyk2p8el7t36n" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspia5d5.png" id="44_v5vta"]
+[ext_resource type="Texture2D" uid="uid://djc0lc3pw34k0" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspib5e5.png" id="45_anrrp"]
+[ext_resource type="Texture2D" uid="uid://ci8u05m6b05e7" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspic5f5.png" id="46_2hfsq"]
+[ext_resource type="PackedScene" uid="uid://b6py2g27hrxtt" path="res://direction.tscn" id="55_dugi2"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_52ejq"]
+height = 2.1
+radius = 0.8
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ijlb6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7j7dw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_52ejq")
+}],
+"loop": false,
+"name": &"ATTACK_0",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_jy45n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_jd026")
+}],
+"loop": false,
+"name": &"ATTACK_1",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_swhiq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_gik5k")
+}],
+"loop": false,
+"name": &"ATTACK_2",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_4hn27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_thxyc")
+}],
+"loop": false,
+"name": &"ATTACK_3",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_lhe8w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_nqun7")
+}],
+"loop": false,
+"name": &"ATTACK_4",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_11ob6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_oqv06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_i7xbo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_yi4cn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_5narx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_wvfdj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_olnbw")
+}],
+"loop": false,
+"name": &"DEATH",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_46gjl")
+}],
+"loop": false,
+"name": &"HIT_0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_x445p")
+}],
+"loop": false,
+"name": &"HIT_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_k8hyi")
+}],
+"loop": false,
+"name": &"HIT_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_pxuuc")
+}],
+"loop": false,
+"name": &"HIT_3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_3n5uj")
+}],
+"loop": false,
+"name": &"HIT_4",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": false,
+"name": &"IDLE",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_pyuoe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_oiec7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_ofboa")
+}],
+"loop": false,
+"name": &"WALK_0",
+"speed": 6.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_bq128")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_2aq8w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_4w8vw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_rfooa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_1x47d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_2nlug")
+}],
+"loop": true,
+"name": &"WALK_1",
+"speed": 6.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_5h775")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_a0qt1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_54cql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_liv3t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_a7fl7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_m7oav")
+}],
+"loop": true,
+"name": &"WALK_2",
+"speed": 6.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("38_p70gc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_qskwj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_c7m5t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_htq58")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_1t6vv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_wc7e3")
+}],
+"loop": true,
+"name": &"WALK_3",
+"speed": 6.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("44_v5vta")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_anrrp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_2hfsq")
+}],
+"loop": false,
+"name": &"WALK_4",
+"speed": 6.5
+}]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_apovx"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath("ProjectilePos:position")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+
+[node name="SPIDERMINION" type="CharacterBody3D" groups=["ENEMY"]]
+script = ExtResource("1_6obow")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0606935, 0)
+shape = SubResource("CylinderShape3D_52ejq")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 2, 0)
+centered = false
+offset = Vector2(-47.515, -50)
+billboard = 2
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_ijlb6")
+animation = &"ATTACK_0"
+frame = 1
+frame_progress = 1.0
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+avoidance_enabled = true
+radius = 3.0
+keep_y_velocity = false
+
+[node name="Direction" parent="." instance=ExtResource("55_dugi2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
+
+[node name="WalkTimer" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_apovx")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.057104215, 0.8690199, 0)
+target_position = Vector3(0, 0, -100)
+
+[node name="AttackTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="ShootTimer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[node name="DeathTimer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true

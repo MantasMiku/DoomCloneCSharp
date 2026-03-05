@@ -1,0 +1,88 @@
+[gd_scene load_steps=9 format=3 uid="uid://i5qaug4uemu7"]
+
+[ext_resource type="Script" uid="uid://c1mi1n4cwxbgv" path="res://ENTITIES/PLAYER/OBJECTS/Pistol.cs" id="1_63m8x"]
+[ext_resource type="Texture2D" uid="uid://53t78yk0t3n3" path="res://GRAPHICS/SPRITES/WEAPONS/pisga0.png" id="1_ktsyl"]
+[ext_resource type="Texture2D" uid="uid://bxvn50rk165x7" path="res://GRAPHICS/SPRITES/WEAPONS/pisgb0.png" id="2_63m8x"]
+[ext_resource type="Texture2D" uid="uid://de6pu0gbitrdy" path="res://GRAPHICS/SPRITES/WEAPONS/pisgc0.png" id="3_rdeud"]
+[ext_resource type="Texture2D" uid="uid://p7wh2orgc0j5" path="res://GRAPHICS/SPRITES/WEAPONS/pisge0.png" id="5_b23vi"]
+[ext_resource type="Texture2D" uid="uid://crgd37fi3tv8f" path="res://GRAPHICS/SPRITES/WEAPONS/pisfa0.png" id="6_63m8x"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_niqlo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ktsyl")
+}],
+"loop": false,
+"name": &"IDLE",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_63m8x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_b23vi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_rdeud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_ktsyl")
+}],
+"loop": false,
+"name": &"SHOOT",
+"speed": 8.0
+}]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_63m8x"]
+properties/0/path = NodePath("CenterContainer/GUN:animation")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath("CenterContainer/GUN:frame")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+properties/2/path = NodePath("CenterContainer/FIRE:position")
+properties/2/spawn = true
+properties/2/replication_mode = 1
+properties/3/path = NodePath(".:position")
+properties/3/spawn = true
+properties/3/replication_mode = 1
+
+[node name="PISTOL" type="Node3D"]
+script = ExtResource("1_63m8x")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="GUN" type="AnimatedSprite2D" parent="CenterContainer"]
+texture_filter = 3
+rotation = -3.1415925
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_niqlo")
+animation = &"SHOOT"
+frame = 1
+frame_progress = 0.9426063
+centered = false
+offset = Vector2(-28.5, 0)
+flip_h = true
+flip_v = true
+
+[node name="FIRE" type="Sprite2D" parent="CenterContainer"]
+visible = false
+texture_filter = 1
+position = Vector2(18, -249)
+scale = Vector2(3, 3)
+texture = ExtResource("6_63m8x")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+target_position = Vector3(0, 0, -100)
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_63m8x")

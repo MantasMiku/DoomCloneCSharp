@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ckav450rrx2xf"
+path="res://.godot/imported/Static02.wav-ca81b617469e330d175ed1679966f8e4.sample"
+
+[deps]
+
+source_file="res://GRAPHICS/SOUNDS/Tape Sounds/Static02.wav"
+dest_files=["res://.godot/imported/Static02.wav-ca81b617469e330d175ed1679966f8e4.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=5
+edit/loop_end=-1
+compress/mode=2

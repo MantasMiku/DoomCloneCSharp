@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=3 uid="uid://bbscpwjqhpkra"]
+
+[ext_resource type="Script" uid="uid://yp4egcfse1qk" path="res://ENTITIES/ENEMIES/IMP/ImpProjectile.cs" id="1_0e8by"]
+[ext_resource type="Texture2D" uid="uid://dptbvyc28ijc" path="res://GRAPHICS/SPRITES/EFFECTS/bal1c0.png" id="1_ikjhh"]
+[ext_resource type="Texture2D" uid="uid://d3pqhfrvbl1wf" path="res://GRAPHICS/SPRITES/EFFECTS/bal1d0.png" id="2_0e8by"]
+[ext_resource type="Texture2D" uid="uid://cyk1ebfi83uo3" path="res://GRAPHICS/SPRITES/EFFECTS/bal1e0.png" id="3_4b2xc"]
+[ext_resource type="Texture2D" uid="uid://dtuslow55r55g" path="res://GRAPHICS/SPRITES/EFFECTS/bal1a0.png" id="4_2lre1"]
+[ext_resource type="Texture2D" uid="uid://c2hdrfnohsuq" path="res://GRAPHICS/SPRITES/EFFECTS/bal1b0.png" id="5_2n4jm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_844vg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ikjhh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_0e8by")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4b2xc")
+}],
+"loop": false,
+"name": &"EXPLODE",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_2lre1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2n4jm")
+}],
+"loop": false,
+"name": &"IDLE",
+"speed": 5.0
+}]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ikjhh"]
+
+[node name="IMP_PROJECTILE" type="Node3D"]
+script = ExtResource("1_0e8by")
+Speed = 4.0
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+billboard = 1
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_844vg")
+animation = &"EXPLODE"
+
+[node name="Area3D" type="Area3D" parent="."]
+priority = 1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_ikjhh")

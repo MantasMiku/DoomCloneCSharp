@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=3 uid="uid://8h3klrhc5t7d"]
+
+[ext_resource type="Texture2D" uid="uid://dgly0ct7kr2jd" path="res://GRAPHICS/UI/Textures/Slider/Rectangle/Progress_Bar=Rectangle_empty_v1.png" id="1_uvlu4"]
+[ext_resource type="Texture2D" uid="uid://cqlb8l1rgpgk0" path="res://GRAPHICS/UI/Textures/Slider/Rectangle/Progress_Bar=Rectangle_full_v1.png" id="2_in0ie"]
+[ext_resource type="FontFile" uid="uid://dj3pnuonj0si5" path="res://GRAPHICS/FONTS/Gothic Pixels.ttf" id="3_8enmx"]
+
+[node name="PlayerUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 1
+offset_left = 89.0
+offset_top = 62.999996
+offset_right = 811.0
+offset_bottom = 173.0
+scale = Vector2(0.4, 0.4)
+size_flags_horizontal = 0
+size_flags_vertical = 8
+value = 69.0
+texture_under = ExtResource("1_uvlu4")
+texture_progress = ExtResource("2_in0ie")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -162.0
+offset_top = -110.0
+offset_right = -34.0
+offset_bottom = -30.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.28485027, 0.28485027, 0.28485027, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("3_8enmx")
+theme_override_font_sizes/font_size = 64
+text = "9999"

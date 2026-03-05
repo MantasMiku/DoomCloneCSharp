@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxq6b7ddb6yev"]
+
+[ext_resource type="Texture2D" uid="uid://baije35oj502i" path="res://GRAPHICS/graphics/stbar.png" id="1_pydrr"]
+
+[node name="TEST_UI" type="Control"]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3.6, 3.6)
+texture = ExtResource("1_pydrr")
+offset = Vector2(0, -16)

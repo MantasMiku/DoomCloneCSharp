@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dti7y44e1snw2"
+path="res://.godot/imported/Off.wav-64456705416d704751c5a468dbac620c.sample"
+
+[deps]
+
+source_file="res://GRAPHICS/SOUNDS/Tape Sounds/Off.wav"
+dest_files=["res://.godot/imported/Off.wav-64456705416d704751c5a468dbac620c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

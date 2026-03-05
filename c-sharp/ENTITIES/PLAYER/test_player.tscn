@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://c20fehds6jx62"]
+
+[ext_resource type="Script" uid="uid://p0x0w4ll3xvb" path="res://ENTITIES/PLAYER/TestPlayer.cs" id="1_erogg"]
+[ext_resource type="Script" uid="uid://cmwigt41xttpy" path="res://ENTITIES/PLAYER/PlayerCamera.cs" id="2_imyr3"]
+[ext_resource type="PackedScene" uid="uid://i5qaug4uemu7" path="res://ENTITIES/PLAYER/OBJECTS/PISTOL.tscn" id="3_srlde"]
+[ext_resource type="Script" uid="uid://do4gdvrhea7i1" path="res://ENTITIES/PLAYER/WeaponsManager.cs" id="4_4ragd"]
+[ext_resource type="PackedScene" uid="uid://j33a20u6k0xe" path="res://ENTITIES/PLAYER/OBJECTS/SHOTGUN.tscn" id="5_arrpv"]
+[ext_resource type="PackedScene" uid="uid://cfo2dm4w0kb81" path="res://ENTITIES/PLAYER/OBJECTS/MELE.tscn" id="5_h1hjn"]
+[ext_resource type="PackedScene" uid="uid://b02gm46pcxdsm" path="res://ENTITIES/PLAYER/OBJECTS/SUPERSHOTGUN.tscn" id="7_8nkts"]
+[ext_resource type="PackedScene" uid="uid://bqsekjgv0if4f" path="res://ENTITIES/PLAYER/OBJECTS/MINIGUN.tscn" id="8_aen1f"]
+[ext_resource type="PackedScene" uid="uid://bo20mpton5g3l" path="res://ENTITIES/PLAYER/OBJECTS/HAND_PISTOL.tscn" id="10_ojl7p"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_d5hcy"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_erogg"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_d5hcy"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 2
+properties/1/path = NodePath(".:rotation")
+properties/1/spawn = true
+properties/1/replication_mode = 2
+properties/2/path = NodePath("Camera/Weapons:position")
+properties/2/spawn = true
+properties/2/replication_mode = 1
+
+[node name="TestPlayer" type="CharacterBody3D" unique_id=805073001 groups=["PLAYER"]]
+floor_stop_on_slope = false
+floor_max_angle = 0.75049156
+floor_snap_length = 0.3
+script = ExtResource("1_erogg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=176203046]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_d5hcy")
+debug_color = Color(0.93462646, 0.21071827, 0.38028446, 0.41960785)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=637350128]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_erogg")
+
+[node name="Camera" type="Camera3D" parent="." unique_id=508906717]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+script = ExtResource("2_imyr3")
+MouseSensitivity = 0.2
+
+[node name="Weapons" type="Node3D" parent="Camera" unique_id=1047165589 groups=["WeaponsManager"]]
+script = ExtResource("4_4ragd")
+
+[node name="PISTOL" parent="Camera/Weapons" unique_id=1577699087 instance=ExtResource("3_srlde")]
+
+[node name="SHOTGUN" parent="Camera/Weapons" unique_id=399729193 instance=ExtResource("5_arrpv")]
+
+[node name="SUPERSHOTGUN" parent="Camera/Weapons" unique_id=1046695264 instance=ExtResource("7_8nkts")]
+
+[node name="MINIGUN" parent="Camera/Weapons" unique_id=1834213693 instance=ExtResource("8_aen1f")]
+
+[node name="MELE" parent="Camera/Weapons" unique_id=2080656484 instance=ExtResource("5_h1hjn")]
+
+[node name="HAND_PISTOL" parent="Camera/Weapons" unique_id=692494473 instance=ExtResource("10_ojl7p")]
+
+[node name="SwitchTimer" type="Timer" parent="." unique_id=883790689]
+wait_time = 0.2
+autostart = true
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=2112888575]
+replication_config = SubResource("SceneReplicationConfig_d5hcy")
+
+[node name="StepRay" type="RayCast3D" parent="." unique_id=1228464577]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+
+[node name="StepRayDown" type="RayCast3D" parent="." unique_id=710279243]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 1, -0.5)
+visible = false
+target_position = Vector3(0, -0.35, 0)
+
+[node name="LedgeRayUp" type="RayCast3D" parent="." unique_id=389501613]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 2.2, 0)
+target_position = Vector3(0, -1.5, 0)
+
+[node name="LedgeRayDown" type="RayCast3D" parent="." unique_id=552585963]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 1.5, 0)
+
+[node name="LedgeRayHeight" type="RayCast3D" parent="." unique_id=226691463]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2, -1)
+target_position = Vector3(0, -0.7, 0)
+
+[node name="FloorRay" type="RayCast3D" parent="." unique_id=386423164]
+target_position = Vector3(0, -0.3, 0)

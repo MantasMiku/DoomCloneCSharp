@@ -1,0 +1,248 @@
+[gd_scene load_steps=10 format=3 uid="uid://bpan0nuf7ri2m"]
+
+[ext_resource type="Texture2D" uid="uid://d3dv082x7rvlt" path="res://GRAPHICS/FLATS/grnrock.png" id="1_vcfw2"]
+[ext_resource type="PackedScene" uid="uid://c20fehds6jx62" path="res://ENTITIES/PLAYER/test_player.tscn" id="2_8je3k"]
+[ext_resource type="PackedScene" uid="uid://ur3vr1keonne" path="res://LEVELS/UI/InGameUI.tscn" id="3_dng4c"]
+[ext_resource type="PackedScene" uid="uid://ckqq08lvjc41j" path="res://ENTITIES/ENEMIES/IMP/imp.tscn" id="4_5rids"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vcfw2"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_8je3k"]
+sky_material = SubResource("ProceduralSkyMaterial_vcfw2")
+
+[sub_resource type="Environment" id="Environment_dng4c"]
+background_mode = 2
+sky = SubResource("Sky_8je3k")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_0upp2"]
+vertices = PackedVector3Array(-49.5, 1, -49.5, -49.5, 1, 49.5, 49.5, 1, 49.5, 49.5, 1, -49.5)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8je3k"]
+albedo_texture = ExtResource("1_vcfw2")
+uv1_scale = Vector3(50, 50, 1)
+
+[node name="Level01" type="Node"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, -14.881797)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_dng4c")
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_0upp2")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D"]
+material_override = SubResource("StandardMaterial3D_8je3k")
+use_collision = true
+size = Vector3(100, 1, 100)
+
+[node name="TestPlayer" parent="." instance=ExtResource("2_8je3k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.651683, 0.49999237, 38.26098)
+
+[node name="InGameUI" parent="." instance=ExtResource("3_dng4c")]
+
+[node name="IMP" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.955364, 0.5, -33.684586)
+
+[node name="IMP2" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.67912, 0.5, -33.684586)
+
+[node name="IMP3" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.136856, 0.5, -33.684586)
+
+[node name="IMP4" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.860611, 0.5, -33.684586)
+
+[node name="IMP5" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.955364, 0.5, -40.25548)
+
+[node name="IMP6" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.67912, 0.5, -40.25548)
+
+[node name="IMP7" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.136856, 0.5, -40.25548)
+
+[node name="IMP8" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.860611, 0.5, -40.25548)
+
+[node name="IMP9" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.955364, 0.5, -26.200214)
+
+[node name="IMP10" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.67912, 0.5, -26.200214)
+
+[node name="IMP11" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.136856, 0.5, -26.200214)
+
+[node name="IMP12" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.860611, 0.5, -26.200214)
+
+[node name="IMP13" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.955364, 0.5, -29.404987)
+
+[node name="IMP14" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.67912, 0.5, -29.404987)
+
+[node name="IMP15" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.136856, 0.5, -29.404987)
+
+[node name="IMP16" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.860611, 0.5, -29.404987)
+
+[node name="IMP17" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.508747, 0.5, -33.684586)
+metadata/_edit_group_ = true
+
+[node name="IMP18" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.767498, 0.5, -33.684586)
+
+[node name="IMP19" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.309761, 0.5, -33.684586)
+
+[node name="IMP20" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.586006, 0.5, -33.684586)
+
+[node name="IMP21" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.508747, 0.5, -40.25548)
+
+[node name="IMP22" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.767498, 0.5, -40.25548)
+
+[node name="IMP23" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.309761, 0.5, -40.25548)
+
+[node name="IMP24" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.586006, 0.5, -40.25548)
+
+[node name="IMP25" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.508747, 0.5, -26.200214)
+
+[node name="IMP26" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.767498, 0.5, -26.200214)
+
+[node name="IMP27" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.309761, 0.5, -26.200214)
+
+[node name="IMP28" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.586006, 0.5, -26.200214)
+
+[node name="IMP29" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.508747, 0.5, -29.404987)
+
+[node name="IMP30" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.767498, 0.5, -29.404987)
+
+[node name="IMP31" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.309761, 0.5, -29.404987)
+
+[node name="IMP32" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.586006, 0.5, -29.404987)
+
+[node name="IMP33" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.821594, 0.5, -33.684586)
+
+[node name="IMP34" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.821594, 0.5, -40.25548)
+
+[node name="IMP35" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.821594, 0.5, -26.200214)
+
+[node name="IMP36" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.821594, 0.5, -29.404987)
+
+[node name="IMP37" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.586006, 0.5, -33.684586)
+
+[node name="IMP38" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.586006, 0.5, -40.25548)
+
+[node name="IMP39" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.586006, 0.5, -26.200214)
+
+[node name="IMP40" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.586006, 0.5, -29.404987)
+
+[node name="IMP41" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.821594, 0.5, -33.684586)
+
+[node name="IMP42" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.821594, 0.5, -40.25548)
+
+[node name="IMP43" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.821594, 0.5, -26.200214)
+
+[node name="IMP44" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.821594, 0.5, -29.404987)
+
+[node name="IMP45" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.955364, 0.5, -18.286785)
+
+[node name="IMP46" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.67912, 0.5, -18.286785)
+
+[node name="IMP47" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.136856, 0.5, -18.286785)
+
+[node name="IMP48" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.860611, 0.5, -18.286785)
+
+[node name="IMP49" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.955364, 0.5, -22.200214)
+
+[node name="IMP50" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.67912, 0.5, -22.200214)
+
+[node name="IMP51" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.136856, 0.5, -22.200214)
+
+[node name="IMP52" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.860611, 0.5, -22.200214)
+
+[node name="IMP53" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.508747, 0.5, -18.286785)
+
+[node name="IMP54" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.767498, 0.5, -18.286785)
+
+[node name="IMP55" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.309761, 0.5, -18.286785)
+
+[node name="IMP56" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.586006, 0.5, -18.286785)
+
+[node name="IMP57" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.508747, 0.5, -22.200214)
+
+[node name="IMP58" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.767498, 0.5, -22.200214)
+
+[node name="IMP59" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.309761, 0.5, -22.200214)
+
+[node name="IMP60" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.586006, 0.5, -22.200214)
+
+[node name="IMP61" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.821594, 0.5, -18.286785)
+
+[node name="IMP62" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.821594, 0.5, -22.200214)
+
+[node name="IMP63" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.586006, 0.5, -18.286785)
+
+[node name="IMP64" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.586006, 0.5, -22.200214)
+
+[node name="IMP65" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.821594, 0.5, -18.286785)
+
+[node name="IMP66" parent="." instance=ExtResource("4_5rids")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.821594, 0.5, -22.200214)

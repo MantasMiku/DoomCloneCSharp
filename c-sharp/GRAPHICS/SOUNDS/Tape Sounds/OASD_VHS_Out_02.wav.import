@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ujbq000sagax"
+path="res://.godot/imported/OASD_VHS_Out_02.wav-67e5ebe32a159622f8f704ae07c9b534.sample"
+
+[deps]
+
+source_file="res://GRAPHICS/SOUNDS/Tape Sounds/OASD_VHS_Out_02.wav"
+dest_files=["res://.godot/imported/OASD_VHS_Out_02.wav-67e5ebe32a159622f8f704ae07c9b534.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

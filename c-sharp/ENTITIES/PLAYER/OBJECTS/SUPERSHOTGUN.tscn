@@ -1,0 +1,94 @@
+[gd_scene load_steps=13 format=3 uid="uid://b02gm46pcxdsm"]
+
+[ext_resource type="Script" uid="uid://er62kqx7iai3" path="res://ENTITIES/PLAYER/OBJECTS/Supershotgun.cs" id="1_d2fev"]
+[ext_resource type="Texture2D" uid="uid://2yv0q3sfyudb" path="res://GRAPHICS/SPRITES/WEAPONS/sht2a0.png" id="2_fykkc"]
+[ext_resource type="Texture2D" uid="uid://c6o63llxlfmlx" path="res://GRAPHICS/SPRITES/WEAPONS/sht2b0.png" id="3_f0jtt"]
+[ext_resource type="Texture2D" uid="uid://bjckbpss6yg7" path="res://GRAPHICS/SPRITES/WEAPONS/sht2c0.png" id="4_vslwe"]
+[ext_resource type="Texture2D" uid="uid://i3jktowx6knn" path="res://GRAPHICS/SPRITES/WEAPONS/sht2d0.png" id="5_c4o8w"]
+[ext_resource type="Texture2D" uid="uid://bke0xyokcywk3" path="res://GRAPHICS/SPRITES/WEAPONS/sht2e0.png" id="6_d4cgg"]
+[ext_resource type="Texture2D" uid="uid://ctq53dy4ncul7" path="res://GRAPHICS/SPRITES/WEAPONS/sht2f0.png" id="7_7gsj7"]
+[ext_resource type="Texture2D" uid="uid://cblghmt5drnui" path="res://GRAPHICS/SPRITES/WEAPONS/sht2g0.png" id="8_rq25d"]
+[ext_resource type="Texture2D" uid="uid://bs2lumv6ribmi" path="res://GRAPHICS/SPRITES/WEAPONS/sht2h0.png" id="9_t2yes"]
+[ext_resource type="Texture2D" uid="uid://bonxxi6qlyjne" path="res://GRAPHICS/SPRITES/WEAPONS/sht2i0.png" id="10_kuumo"]
+[ext_resource type="Texture2D" uid="uid://iitsiunkbdwu" path="res://GRAPHICS/SPRITES/WEAPONS/sht2j0.png" id="11_sntcu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_niqlo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fykkc")
+}],
+"loop": false,
+"name": &"IDLE",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_f0jtt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vslwe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_c4o8w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_d4cgg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7gsj7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rq25d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_t2yes")
+}],
+"loop": false,
+"name": &"RELOAD",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_kuumo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_sntcu")
+}],
+"loop": false,
+"name": &"SHOOT",
+"speed": 10.0
+}]
+
+[node name="SUPERSHOTGUN" type="Node3D"]
+script = ExtResource("1_d2fev")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="GUN" type="AnimatedSprite2D" parent="CenterContainer"]
+texture_filter = 1
+position = Vector2(116, 0)
+rotation = -3.1415925
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_niqlo")
+animation = &"RELOAD"
+centered = false
+flip_h = true
+flip_v = true
+
+[node name="GunRays" type="Node3D" parent="."]
+
+[node name="RayCast3D" type="RayCast3D" parent="GunRays"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 0)
+target_position = Vector3(0, 0, -100)
+
+[node name="RayCast3D2" type="RayCast3D" parent="GunRays"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, 0)
+target_position = Vector3(0, 0, -100)

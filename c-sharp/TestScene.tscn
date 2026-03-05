@@ -1,0 +1,125 @@
+[gd_scene load_steps=8 format=3 uid="uid://keihjb0npvx1"]
+
+[ext_resource type="Script" uid="uid://biqgpwe44bs6q" path="res://World.cs" id="1_cguwc"]
+[ext_resource type="Texture2D" uid="uid://djkxhwgwovo5d" path="res://GRAPHICS/FLATS/flat1_2.png" id="1_mncer"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mncer"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_cguwc"]
+sky_material = SubResource("ProceduralSkyMaterial_mncer")
+
+[sub_resource type="Environment" id="Environment_wicfy"]
+background_mode = 2
+sky = SubResource("Sky_cguwc")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_wicfy"]
+vertices = PackedVector3Array(-24.5, 0.20000005, -24.5, -24.5, 0.20000005, 24.5, 24.5, 0.20000005, 24.5, 24.5, 0.20000005, -24.5)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+cell_height = 0.1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cguwc"]
+albedo_texture = ExtResource("1_mncer")
+uv1_scale = Vector3(35, 35, 35)
+
+[node name="TestScene" type="Node" node_paths=PackedStringArray("_spawnP1", "_spawnP2", "_spawnP3", "_spawnP4", "_enemySpawnPoints")]
+script = ExtResource("1_cguwc")
+_spawnP1 = NodePath("PlayerSpawnPoints/1")
+_spawnP2 = NodePath("PlayerSpawnPoints/2")
+_spawnP3 = NodePath("PlayerSpawnPoints/3")
+_spawnP4 = NodePath("PlayerSpawnPoints/4")
+_enemySpawnPoints = [NodePath("EnemySpawnPoints/1"), NodePath("EnemySpawnPoints/2"), NodePath("EnemySpawnPoints/3"), NodePath("EnemySpawnPoints/4")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_wicfy")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("uid://c20fehds6jx62", "uid://ckqq08lvjc41j")
+spawn_path = NodePath("..")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MainMenu" type="PanelContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 344.0
+offset_top = 218.0
+offset_right = -344.0
+offset_bottom = -218.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainMenu"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MainMenu/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="CanvasLayer/MainMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Main Menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Host" type="Button" parent="CanvasLayer/MainMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Host"
+
+[node name="Join" type="Button" parent="CanvasLayer/MainMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Join"
+
+[node name="AddressEntry" type="LineEdit" parent="CanvasLayer/MainMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+placeholder_text = "Enter Address To Join"
+alignment = 1
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_wicfy")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+material_override = SubResource("StandardMaterial3D_cguwc")
+use_collision = true
+size = Vector3(50, 1, 50)
+
+[node name="PlayerSpawnPoints" type="Node3D" parent="."]
+
+[node name="1" type="Node3D" parent="PlayerSpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, -14)
+
+[node name="2" type="Node3D" parent="PlayerSpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -16)
+
+[node name="3" type="Node3D" parent="PlayerSpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -5)
+
+[node name="4" type="Node3D" parent="PlayerSpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 12, -6)
+
+[node name="EnemySpawnPoints" type="Node3D" parent="."]
+
+[node name="1" type="Node3D" parent="EnemySpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 14)
+
+[node name="2" type="Node3D" parent="EnemySpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 14)
+
+[node name="3" type="Node3D" parent="EnemySpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, 14)
+
+[node name="4" type="Node3D" parent="EnemySpawnPoints"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 14)
