@@ -1243,9 +1243,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3, 0.100000024, -54.7)
 [node name="lamp8" parent="LAMPS" unique_id=92021676 instance=ExtResource("18_6vn5n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 0.100000024, -54.7)
 
-[node name="lamp9" parent="LAMPS" unique_id=1580309633 instance=ExtResource("18_6vn5n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -6)
-
 [node name="Area3D" type="Area3D" parent="." unique_id=1751367890]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, -1, -84)
 script = ExtResource("19_ex8fk")
