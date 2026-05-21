@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://nwvjeymldh11"
+path="res://.godot/imported/testmap.map-4804b462ad9897cd2601be7b8386e1ca.tres"
+
+[deps]
+
+source_file="res://trenchbroom/maps/testmap.map"
+dest_files=["res://.godot/imported/testmap.map-4804b462ad9897cd2601be7b8386e1ca.tres"]
+
+[params]
+

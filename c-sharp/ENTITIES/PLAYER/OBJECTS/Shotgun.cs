@@ -8,9 +8,16 @@ public partial class Shotgun : Node3D
 	RayCast3D ray;
 	bool shoot = false;
 	bool canShoot = false;
-	int damage = 100;
+	int damage = 150;
+
+	private AudioStreamPlayer ShootSoundPlayer;
+    private AudioStream ShootSound;
 	public override void _Ready()
     {
+		ShootSoundPlayer = new AudioStreamPlayer();
+        AddChild(ShootSoundPlayer);
+		ShootSound = GD.Load<AudioStream>("res://GRAPHICS/SOUNDS/dsshotgn.wav");
+
         gun = GetNode<AnimatedSprite2D>("CenterContainer/GUN");
 		fire = GetNode<AnimatedSprite2D>("CenterContainer/FIRE");
 		fire.Visible = false;
@@ -29,11 +36,14 @@ public partial class Shotgun : Node3D
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
     {
+		if(PlayerStats.playerHealth <= 0)
+            return;
+			
 		if(!shoot)
         {
             gun.Play("IDLE");
         }
-        if(Input.IsActionJustPressed("Shoot") && !shoot && canShoot)
+        if(Input.IsActionPressed("Shoot") && !shoot && canShoot)
         {
            Shoot();
         }
@@ -65,6 +75,10 @@ public partial class Shotgun : Node3D
 
 	public async void Shoot()
 	{
+
+		ShootSoundPlayer.Stream = ShootSound;
+        ShootSoundPlayer.Play();
+
 		shoot = true;
 		ray.SetProcess(true);
         var rayHit = ray.GetCollider();
@@ -74,17 +88,17 @@ public partial class Shotgun : Node3D
             if (node.IsInGroup("ENEMY"))
             {
 				float dist = ray.GlobalPosition.DistanceTo(node.GlobalPosition);
-				if(dist <= 12 && dist >= 0)
+				if(dist <= 14 && dist >= 0)
                 {
                     node.Call("TakeDamage", damage);
                 }  
-				else if (dist <= 20 && dist > 12)
+				else if (dist <= 20 && dist > 14)
                 {
-					node.Call("TakeDamage", 70);
+					node.Call("TakeDamage", 100);
                 }    
 				else if (dist > 20)
                 {
-					node.Call("TakeDamage", 50);
+					node.Call("TakeDamage", 75);
                 }   
             }
         

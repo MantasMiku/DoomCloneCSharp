@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dkw0pg8lrr0nn"]
+
+[ext_resource type="PackedScene" uid="uid://mm34etpjklfj" path="res://Models/Blender/brown/tileset_dungeon_brown.glb" id="1_lrjo6"]
+
+[node name="tileset_dungeon_brown" unique_id=340388656 instance=ExtResource("1_lrjo6")]

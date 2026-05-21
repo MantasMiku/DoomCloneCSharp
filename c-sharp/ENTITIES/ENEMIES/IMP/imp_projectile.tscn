@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bbscpwjqhpkra"]
+[gd_scene format=3 uid="uid://bbscpwjqhpkra"]
 
 [ext_resource type="Script" uid="uid://yp4egcfse1qk" path="res://ENTITIES/ENEMIES/IMP/ImpProjectile.cs" id="1_0e8by"]
 [ext_resource type="Texture2D" uid="uid://dptbvyc28ijc" path="res://GRAPHICS/SPRITES/EFFECTS/bal1c0.png" id="1_ikjhh"]
@@ -37,19 +37,18 @@ animations = [{
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_ikjhh"]
 
-[node name="IMP_PROJECTILE" type="Node3D"]
+[node name="IMP_PROJECTILE" type="Node3D" unique_id=823597423]
 script = ExtResource("1_0e8by")
-Speed = 4.0
 
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=655758448]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
 billboard = 1
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_844vg")
 animation = &"EXPLODE"
 
-[node name="Area3D" type="Area3D" parent="."]
+[node name="Area3D" type="Area3D" parent="." unique_id=34350370]
 priority = 1
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=931448737]
 shape = SubResource("SphereShape3D_ikjhh")

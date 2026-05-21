@@ -13,11 +13,15 @@ public partial class MainUI : Control
     Button spStart;
     Button eStart;
     Button tStart;
+    Button spLevel01;
+    Button spLevel02;
+    Button spLevel03;
     ColorRect texture;
     private ShaderMaterial shaderMat;
     MarginContainer mainMenu;
     MarginContainer optionsMenu;
     MarginContainer levelsMenu;
+    MarginContainer levelsMenuSp;
     MarginContainer popUp;
     
     private bool spMouseEntered = false;
@@ -30,6 +34,10 @@ public partial class MainUI : Control
     AnimatedSprite2D spSprite;
     AnimatedSprite2D eSprite;
     AnimatedSprite2D tSprite;
+
+    AnimatedSprite2D spSprite01;
+    AnimatedSprite2D spSprite02;
+    AnimatedSprite2D spSprite03;
     
     private AudioStreamPlayer uiSoundPlayer;      
     private AudioStreamPlayer hoverSoundPlayer;  
@@ -46,17 +54,18 @@ public partial class MainUI : Control
     private AudioStream transitionSound;
     private AudioStream monsterScream;
 
-    
     [Export] public float FadeDuration = 0.3f;
     [Export] public float MinIntensity = 0.06f;
     [Export] public float MaxIntensity = 1.0f;
     
     public override async void _Ready()
     {
+        Input.MouseMode = Input.MouseModeEnum.Visible;
         //Margins
         mainMenu = GetNode<MarginContainer>("Main");
         optionsMenu = GetNode<MarginContainer>("Options");
         levelsMenu = GetNode<MarginContainer>("Levels");
+        levelsMenuSp = GetNode<MarginContainer>("LevelsSP");
         popUp = GetNode<MarginContainer>("PopUp");
 
         //Shader
@@ -73,10 +82,18 @@ public partial class MainUI : Control
         eStart = GetNode<Button>("Levels/VBoxContainer/Panel/HBoxContainer/Button2");
         tStart = GetNode<Button>("Levels/VBoxContainer/Panel/HBoxContainer/Button3");
 
+        spLevel01 = GetNode<Button>("LevelsSP/VBoxContainer/Panel/HBoxContainer/Button");
+        spLevel02 = GetNode<Button>("LevelsSP/VBoxContainer/Panel/HBoxContainer/Button2");
+        spLevel03 = GetNode<Button>("LevelsSP/VBoxContainer/Panel/HBoxContainer/Button3");
+
         //AnimSprites
         spSprite = GetNode<AnimatedSprite2D>("Levels/VBoxContainer/Panel/HBoxContainer/Button/MarginContainer/AnimatedSprite2D");
         eSprite = GetNode<AnimatedSprite2D>("Levels/VBoxContainer/Panel/HBoxContainer/Button2/MarginContainer/AnimatedSprite2D");
         tSprite = GetNode<AnimatedSprite2D>("Levels/VBoxContainer/Panel/HBoxContainer/Button3/MarginContainer/AnimatedSprite2D");
+
+        spSprite01 = GetNode<AnimatedSprite2D>("LevelsSP/VBoxContainer/Panel/HBoxContainer/Button/MarginContainer/AnimatedSprite2D");
+        spSprite02 = GetNode<AnimatedSprite2D>("LevelsSP/VBoxContainer/Panel/HBoxContainer/Button2/MarginContainer/AnimatedSprite2D");
+        spSprite03 = GetNode<AnimatedSprite2D>("LevelsSP/VBoxContainer/Panel/HBoxContainer/Button3/MarginContainer/AnimatedSprite2D");
         
         // Initialize dedicated sound players
         uiSoundPlayer = new AudioStreamPlayer();
@@ -118,6 +135,10 @@ public partial class MainUI : Control
         tStart.MouseExited += MouseExitedT;
         tStart.Pressed += MousePressedT;
 
+        spLevel01.Pressed += MousePressedL01;
+        spLevel02.Pressed += MousePressedL02;
+        spLevel03.Pressed += MousePressedL03;
+
         //AnimSprite Signals
         spSprite.AnimationFinished += OnAnimationFinishedSp;
         eSprite.AnimationFinished += OnAnimationFinishedE;
@@ -127,6 +148,10 @@ public partial class MainUI : Control
         spSprite.Play("Idle");
         eSprite.Play("Idle");
         tSprite.Play("Idle");
+
+        spSprite01.Play("Idle");
+        spSprite02.Play("Idle");
+        spSprite03.Play("Idle");
 
         mainMenu.Visible = true;
         optionsMenu.Visible = false;
@@ -147,6 +172,37 @@ public partial class MainUI : Control
 
         await FadeOut();
     }
+
+    private async void MousePressedL03()
+    {
+        PlaySoundWithFadeOut(transitionSoundPlayer, transitionSound, 0.5f);
+        await FadeIn();
+        GetTree().ChangeSceneToFile("res://LEVELS/SINGLEPLAYER/LEVEL03.tscn");
+    }
+
+
+    private async void MousePressedL02()
+    {
+        PlaySoundWithFadeOut(transitionSoundPlayer, transitionSound, 0.5f);
+        await FadeIn();
+        GetTree().ChangeSceneToFile("res://LEVELS/SINGLEPLAYER/LEVEL02.tscn");
+    }
+
+
+    private async void MousePressedL01()
+    {
+        PlaySoundWithFadeOut(transitionSoundPlayer, transitionSound, 0.5f);
+        
+        // eSprite.Play("Shoot");
+        // // Sound will play automatically on frames 1 and 3 via FrameChanged
+        
+        // await ToSignal(eSprite, AnimatedSprite2D.SignalName.AnimationFinished);
+        // eSprite.Stop();
+        
+        await FadeIn();
+        GetTree().ChangeSceneToFile("res://LEVELS/trench_broom_prototype.tscn");
+    }
+
 
     private void OnESpriteFrameChanged()
     {
@@ -194,10 +250,10 @@ public partial class MainUI : Control
     {
         await Task.Delay((int)(delay * 1000));
         
-        if (player.Playing)
-        {
-            FadeOutSoundPlayer(player, fadeOutDuration, originalVolumeDb);
-        }
+        if (!IsInstanceValid(player)) return; // check before touching the object
+        if (!player.Playing) return;
+        
+        FadeOutSoundPlayer(player, fadeOutDuration, originalVolumeDb);
     }
     
     private void FadeOutSoundPlayer(AudioStreamPlayer player, float fadeOutDuration, float originalVolumeDb)
@@ -255,15 +311,22 @@ public partial class MainUI : Control
     private async void MousePressedSp()
     {
         // Play both sounds simultaneously
-        PlaySoundOnPlayer(shootSoundPlayer, monsterScream);
-        PlaySoundWithFadeOut(transitionSoundPlayer, transitionSound, 0.5f);
+        // PlaySoundOnPlayer(shootSoundPlayer, monsterScream);
+        // PlaySoundWithFadeOut(transitionSoundPlayer, transitionSound, 0.5f);
         
-        spSprite.Play("Shoot");
-        await ToSignal(spSprite, AnimatedSprite2D.SignalName.AnimationFinished);
-        spSprite.Stop();
+        // spSprite.Play("Shoot");
+        // await ToSignal(spSprite, AnimatedSprite2D.SignalName.AnimationFinished);
+        // spSprite.Stop();
         
+        // await FadeIn();
+        //GetTree().ChangeSceneToFile("res://LEVELS/SINGLEPLAYER/LEVEL01.tscn");
+        PlaySoundOnPlayer(uiSoundPlayer, clickSound);
         await FadeIn();
-        GetTree().ChangeSceneToFile("res://LEVELS/SINGLEPLAYER/LEVEL01.tscn");
+        levelsMenu.Visible = false;
+        levelsMenuSp.Visible = true;
+        //PlaySoundWithFadeOut(transitionSoundPlayer, transitionSound, 0.5f);
+
+        await FadeOut();
     }
 
     private void OnAnimationFinishedSp()
@@ -461,6 +524,14 @@ public partial class MainUI : Control
             await FadeOut();
             return;
         }
+        if (levelsMenuSp.Visible)
+        {
+            await FadeIn();
+            levelsMenuSp.Visible = false;   
+            levelsMenu.Visible = true;
+            await FadeOut();
+            return;
+        }
 
         if (optionsMenu.Visible)
         {
@@ -497,7 +568,9 @@ public partial class MainUI : Control
         PlaySoundOnPlayer(uiSoundPlayer, clickSound);
         //PlaySoundWithFadeOut(transitionSoundPlayer, transitionSound, 0.5f);
         await FadeIn();
-        GetTree().Quit();    
+        popUp.Visible = true;
+         await FadeOut();
+        //GetTree().Quit();    
     }
     
     private async void StartPressed()

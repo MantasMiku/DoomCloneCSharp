@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://df54ftk5byxku" path="res://addons/CSGStairMaker3D.tscn" id="6_7cbxl"]
 [ext_resource type="PackedScene" uid="uid://dcn6c7iehrjjc" path="res://ENTITIES/ENEMIES/SPIDER/spider.tscn" id="9_njel3"]
 [ext_resource type="PackedScene" uid="uid://ur3vr1keonne" path="res://LEVELS/UI/InGameUI.tscn" id="10_vr1i5"]
+[ext_resource type="PackedScene" uid="uid://ckqq08lvjc41j" path="res://ENTITIES/ENEMIES/IMP/imp.tscn" id="11_rpuu0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ia1lp"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -175,11 +176,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -86, 1, -3)
 
 [node name="TestPlayer" parent="." unique_id=1405947691 instance=ExtResource("1_uhqqe")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 3, -8)
+floor_constant_speed = true
 
 [node name="SPIDER" parent="." unique_id=1726525710 instance=ExtResource("9_njel3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, -79)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 0, -154.00696)
 
 [node name="SPIDER2" parent="." unique_id=1294715786 instance=ExtResource("9_njel3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46, 0, -79)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46, 0, -154.00696)
 
 [node name="InGameUI" parent="." unique_id=1507693318 instance=ExtResource("10_vr1i5")]
+
+[node name="IMP" parent="." unique_id=1588013500 instance=ExtResource("11_rpuu0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51, 0, 0)

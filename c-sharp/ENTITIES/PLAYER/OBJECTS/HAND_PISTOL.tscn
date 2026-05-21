@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bo20mpton5g3l"]
+[gd_scene format=3 uid="uid://bo20mpton5g3l"]
 
 [ext_resource type="Script" uid="uid://bf6fcstgf54j2" path="res://ENTITIES/PLAYER/OBJECTS/HandPistol.cs" id="1_cifn6"]
 [ext_resource type="Texture2D" uid="uid://dnt1jhrryk1xx" path="res://GRAPHICS/SPRITES/WEAPONS/SECRET/Pistolidle.png" id="2_6juxo"]
@@ -35,10 +35,10 @@ animations = [{
 "speed": 8.0
 }]
 
-[node name="HAND_PISTOL" type="Node3D"]
+[node name="HAND_PISTOL" type="Node3D" unique_id=1231676461]
 script = ExtResource("1_cifn6")
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=946015948]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -47,7 +47,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="GUN" type="AnimatedSprite2D" parent="CenterContainer"]
+[node name="GUN" type="AnimatedSprite2D" parent="CenterContainer" unique_id=1130104978]
 texture_filter = 1
 rotation = 3.1415927
 scale = Vector2(2, 2)
@@ -58,7 +58,7 @@ offset = Vector2(-200, -3.52)
 flip_h = true
 flip_v = true
 
-[node name="HAND" type="Sprite2D" parent="CenterContainer"]
+[node name="HAND" type="Sprite2D" parent="CenterContainer" unique_id=869443086]
 visible = false
 texture_filter = 1
 scale = Vector2(3, 3)
@@ -66,5 +66,5 @@ texture = ExtResource("5_w6341")
 offset = Vector2(-70, -21)
 flip_h = true
 
-[node name="RayCast3D" type="RayCast3D" parent="."]
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=1863955567]
 target_position = Vector3(0, 0, -200)

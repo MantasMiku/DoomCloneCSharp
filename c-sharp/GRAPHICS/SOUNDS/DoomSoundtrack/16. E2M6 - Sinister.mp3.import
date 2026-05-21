@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dwt02ov65mxu8"
+path="res://.godot/imported/16. E2M6 - Sinister.mp3-aaf77aac15475092ee4bb1529c1e7cc3.mp3str"
+
+[deps]
+
+source_file="res://GRAPHICS/SOUNDS/DoomSoundtrack/16. E2M6 - Sinister.mp3"
+dest_files=["res://.godot/imported/16. E2M6 - Sinister.mp3-aaf77aac15475092ee4bb1529c1e7cc3.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

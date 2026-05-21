@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://wgb6h8k280yg"]
+
+[ext_resource type="Script" uid="uid://b0kub6yi7ra5e" path="res://Models/Lamp.cs" id="1_y51ah"]
+[ext_resource type="Texture2D" uid="uid://614v48avbaa7" path="res://GRAPHICS/SPRITES/ENVIROMENT/gor1a0.png" id="2_xbgku"]
+[ext_resource type="Texture2D" uid="uid://bufxo30eymm74" path="res://GRAPHICS/SPRITES/ENVIROMENT/gor1b0.png" id="3_y51ah"]
+[ext_resource type="Texture2D" uid="uid://8dudskrlp2n1" path="res://GRAPHICS/SPRITES/ENVIROMENT/gor1c0.png" id="4_pa2ae"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2xu80"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xbgku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_y51ah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pa2ae")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 4.0
+}]
+
+[node name="Corpse2" type="Node3D" unique_id=203221194]
+script = ExtResource("1_y51ah")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1214568881]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+centered = false
+offset = Vector2(-13, 0)
+billboard = 2
+texture_filter = 2
+sprite_frames = SubResource("SpriteFrames_2xu80")
+animation = &"Idle"
+frame_progress = 0.115381554

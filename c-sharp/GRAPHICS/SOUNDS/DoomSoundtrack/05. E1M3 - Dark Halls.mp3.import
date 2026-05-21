@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bh1u08vcsxoa3"
+path="res://.godot/imported/05. E1M3 - Dark Halls.mp3-a506c28f2f6c4404cb085e775fa0848c.mp3str"
+
+[deps]
+
+source_file="res://GRAPHICS/SOUNDS/DoomSoundtrack/05. E1M3 - Dark Halls.mp3"
+dest_files=["res://.godot/imported/05. E1M3 - Dark Halls.mp3-a506c28f2f6c4404cb085e775fa0848c.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

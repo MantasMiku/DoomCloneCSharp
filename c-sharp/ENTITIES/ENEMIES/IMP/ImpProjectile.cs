@@ -5,7 +5,7 @@ using System.Data;
 public partial class ImpProjectile : Node3D
 {
 	// Called when the node enters the scene tree for the first time.
-	[Export] public float Speed = 40f;
+	[Export] public float Speed = 15;
     private Vector3 direction;
 	AnimatedSprite3D anim;
     float timer;
@@ -35,7 +35,7 @@ public partial class ImpProjectile : Node3D
             GlobalPosition += direction * Speed * (float)delta;
         }
     }
-
+    
     public async void Explode()
     {
         anim.Play("EXPLODE");
@@ -43,7 +43,7 @@ public partial class ImpProjectile : Node3D
         anim.Visible = false;
         QueueFree();
     }
-    private void OnBodyEntered(Node3D body)
+    private async void OnBodyEntered(Node3D body)
     {
         if (body.IsInGroup("PLAYER"))
         {
@@ -52,6 +52,13 @@ public partial class ImpProjectile : Node3D
             explode = true;
             Explode();
         }
-    }
 
+        if (!body.IsInGroup("ENEMY") && !body.IsInGroup("PLAYER"))
+        {
+            GD.Print("Hit OBJ");
+            //PlayerStats.ChangeHealth(-damage);
+            explode = true;
+            Explode();
+        }
+    }
 }

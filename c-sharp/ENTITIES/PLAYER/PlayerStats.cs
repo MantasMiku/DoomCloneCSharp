@@ -1,35 +1,54 @@
 using Godot;
 using System;
+using System.Threading.Tasks;
 
 public partial class PlayerStats : Node
 {
     private WeaponsManager weaponsManager;
 	public static int playerHealth = 100;
+    public static int playerMaxHealth = 200;
 	public static int  playerArmour = 100;
 	public static int  pistolAmmo = 100;
 	public static int  shotgunAmmo = 80;
-    public InGameUI ui;
+    public static int playerScore = 0;
+    private static InGameUI playerUi;
+    //private PackedScene mainMenuScene = ResourceLoader.Load<PackedScene>("res://LEVELS/UI/main_menu.tscn");
 
+    public static void RegisterUI(InGameUI ui)
+    {
+        playerUi = ui;
+    }
+    public static void UnregisterUI()
+    {
+        playerUi = null;
+    }
     public override void _Ready()
     {
         playerHealth = 100;
 		playerArmour = 0;
-		pistolAmmo = 1000;
-		shotgunAmmo = 80;
-        var rootScene = GetTree().CurrentScene;
-        ui = rootScene.GetNode<InGameUI>("InGameUI");
+		pistolAmmo = 50;
+		shotgunAmmo = 24;
+        playerScore = 0;
     }
 
     public override void _Process(double delta)
-    {
+    {  
         TestMethod();
     }
 
-
-	public static void ChangeHealth(int ammount)
+    public static void ChangeScore(int ammount)
     {
-        playerHealth += ammount;
-        //ui.HurtEffect();
+        playerScore += ammount;
+    }
+
+	public static void ChangeHealth(int amount)
+    {
+        playerHealth += amount;
+        if (playerHealth > playerMaxHealth)
+            playerHealth = playerMaxHealth;
+
+        if (amount < 0)
+            playerUi.PlayerHurt(); // fire and forget explicitly, keeps async chain intact
     }
 
 	public static void ChangeArmour(int ammount)
@@ -71,7 +90,7 @@ public partial class PlayerStats : Node
             PlayerStats.pistolAmmo += 2;
         }
 
-        if (PlayerStats.playerHealth <= 0 || Input.IsKeyPressed(Key.F10))
+        if (Input.IsKeyPressed(Key.F10))
         {
             ReloadScene();
         }
@@ -91,6 +110,14 @@ public partial class PlayerStats : Node
         {
             PlayerStats.PrintStats();
         }
+        
+    }
+    public static void Reset()
+    {
+        playerHealth = 100;
+        pistolAmmo = 50;
+        shotgunAmmo = 24;
+        playerScore = 0;
     }
 	
 }

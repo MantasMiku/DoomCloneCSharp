@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://dj3p1ilblkfxs"]
+[gd_scene format=3 uid="uid://dj3p1ilblkfxs"]
 
 [ext_resource type="Script" uid="uid://rf756elbxaou" path="res://ENTITIES/ENEMIES/SPIDERMINION/SpiderMinion.cs" id="1_6obow"]
 [ext_resource type="Texture2D" uid="uid://bhim5u1l62i8f" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDERMINION/bspig1.png" id="1_7j7dw"]
@@ -287,14 +287,14 @@ properties/1/path = NodePath("ProjectilePos:position")
 properties/1/spawn = true
 properties/1/replication_mode = 1
 
-[node name="SPIDERMINION" type="CharacterBody3D" groups=["ENEMY"]]
+[node name="SPIDERMINION" type="CharacterBody3D" unique_id=54387294 groups=["ENEMY"]]
 script = ExtResource("1_6obow")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1277789871]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0606935, 0)
 shape = SubResource("CylinderShape3D_52ejq")
 
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1995490306]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 2, 0)
 centered = false
 offset = Vector2(-47.515, -50)
@@ -305,34 +305,34 @@ animation = &"ATTACK_0"
 frame = 1
 frame_progress = 1.0
 
-[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1412500130]
 avoidance_enabled = true
 radius = 3.0
 keep_y_velocity = false
 
-[node name="Direction" parent="." instance=ExtResource("55_dugi2")]
+[node name="Direction" parent="." unique_id=1316406419 instance=ExtResource("55_dugi2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 visible = false
 
-[node name="WalkTimer" type="Timer" parent="."]
+[node name="WalkTimer" type="Timer" parent="." unique_id=43142954]
 wait_time = 4.0
 one_shot = true
 
-[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=1370865579]
 replication_config = SubResource("SceneReplicationConfig_apovx")
 
-[node name="RayCast3D" type="RayCast3D" parent="."]
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=2053454730]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.057104215, 0.8690199, 0)
 target_position = Vector3(0, 0, -100)
 
-[node name="AttackTimer" type="Timer" parent="."]
+[node name="AttackTimer" type="Timer" parent="." unique_id=1229754661]
 wait_time = 3.0
 one_shot = true
 
-[node name="ShootTimer" type="Timer" parent="."]
+[node name="ShootTimer" type="Timer" parent="." unique_id=1776581017]
 wait_time = 0.2
 one_shot = true
 
-[node name="DeathTimer" type="Timer" parent="."]
-wait_time = 10.0
+[node name="DeathTimer" type="Timer" parent="." unique_id=1229671439]
+wait_time = 2.0
 one_shot = true

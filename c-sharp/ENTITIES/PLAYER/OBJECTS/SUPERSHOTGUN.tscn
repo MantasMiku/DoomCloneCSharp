@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b02gm46pcxdsm"]
+[gd_scene format=3 uid="uid://b02gm46pcxdsm"]
 
 [ext_resource type="Script" uid="uid://er62kqx7iai3" path="res://ENTITIES/PLAYER/OBJECTS/Supershotgun.cs" id="1_d2fev"]
 [ext_resource type="Texture2D" uid="uid://2yv0q3sfyudb" path="res://GRAPHICS/SPRITES/WEAPONS/sht2a0.png" id="2_fykkc"]
@@ -60,10 +60,10 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="SUPERSHOTGUN" type="Node3D"]
+[node name="SUPERSHOTGUN" type="Node3D" unique_id=1087841154]
 script = ExtResource("1_d2fev")
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1963175662]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -72,7 +72,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="GUN" type="AnimatedSprite2D" parent="CenterContainer"]
+[node name="GUN" type="AnimatedSprite2D" parent="CenterContainer" unique_id=1171857200]
 texture_filter = 1
 position = Vector2(116, 0)
 rotation = -3.1415925
@@ -83,12 +83,12 @@ centered = false
 flip_h = true
 flip_v = true
 
-[node name="GunRays" type="Node3D" parent="."]
+[node name="GunRays" type="Node3D" parent="." unique_id=230954490]
 
-[node name="RayCast3D" type="RayCast3D" parent="GunRays"]
+[node name="RayCast3D" type="RayCast3D" parent="GunRays" unique_id=213029873]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 0)
 target_position = Vector3(0, 0, -100)
 
-[node name="RayCast3D2" type="RayCast3D" parent="GunRays"]
+[node name="RayCast3D2" type="RayCast3D" parent="GunRays" unique_id=1868350806]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, 0)
 target_position = Vector3(0, 0, -100)

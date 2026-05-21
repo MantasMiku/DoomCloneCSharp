@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cfo2dm4w0kb81"]
+[gd_scene format=3 uid="uid://cfo2dm4w0kb81"]
 
 [ext_resource type="Script" uid="uid://c0com5wqdtpbc" path="res://ENTITIES/PLAYER/OBJECTS/Mele.cs" id="1_pth1t"]
 [ext_resource type="Texture2D" uid="uid://dyry6r4u4bthe" path="res://GRAPHICS/SPRITES/WEAPONS/pungb0.png" id="2_voh1h"]
@@ -46,10 +46,10 @@ animations = [{
 [sub_resource type="BoxShape3D" id="BoxShape3D_voh1h"]
 size = Vector3(1, 1, 1.5)
 
-[node name="MELE" type="Node3D"]
+[node name="MELE" type="Node3D" unique_id=802780769]
 script = ExtResource("1_pth1t")
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1360912702]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -58,14 +58,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="HAND" type="Sprite2D" parent="CenterContainer"]
+[node name="HAND" type="Sprite2D" parent="CenterContainer" unique_id=608161894]
 texture_filter = 1
 scale = Vector2(3, 3)
 texture = ExtResource("6_kgvsf")
 offset = Vector2(-70, -21)
 flip_h = true
 
-[node name="GUN" type="AnimatedSprite2D" parent="CenterContainer"]
+[node name="GUN" type="AnimatedSprite2D" parent="CenterContainer" unique_id=248341855]
 texture_filter = 1
 rotation = -3.1415925
 scale = Vector2(3, 3)
@@ -77,7 +77,7 @@ centered = false
 offset = Vector2(-152.3, 0)
 flip_v = true
 
-[node name="GUN2" type="AnimatedSprite2D" parent="CenterContainer"]
+[node name="GUN2" type="AnimatedSprite2D" parent="CenterContainer" unique_id=731853125]
 texture_filter = 1
 rotation = -3.1415925
 scale = Vector2(-3, 3)
@@ -89,7 +89,7 @@ centered = false
 offset = Vector2(-152, 0)
 flip_v = true
 
-[node name="GUN3" type="AnimatedSprite2D" parent="CenterContainer"]
+[node name="GUN3" type="AnimatedSprite2D" parent="CenterContainer" unique_id=1636357311]
 texture_filter = 1
 position = Vector2(752, -360.00006)
 rotation = -3.8397243
@@ -102,7 +102,7 @@ centered = false
 offset = Vector2(5.5, 0)
 flip_v = true
 
-[node name="GUN4" type="AnimatedSprite2D" parent="CenterContainer"]
+[node name="GUN4" type="AnimatedSprite2D" parent="CenterContainer" unique_id=153990556]
 texture_filter = 1
 position = Vector2(-760, -344.00003)
 rotation = 0.6981317
@@ -113,9 +113,9 @@ centered = false
 offset = Vector2(5.5, 0)
 flip_v = true
 
-[node name="Area3D" type="Area3D" parent="."]
+[node name="Area3D" type="Area3D" parent="." unique_id=1608757419]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=819037495]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.25)
 shape = SubResource("BoxShape3D_voh1h")

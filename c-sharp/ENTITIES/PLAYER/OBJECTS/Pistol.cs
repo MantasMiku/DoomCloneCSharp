@@ -11,9 +11,15 @@ public partial class Pistol : Node3D
 	bool shoot = false;
     bool canShoot = false;
     bool shootHold = false;
-    int damage = 50;
+    private AudioStreamPlayer ShootSoundPlayer;
+    private AudioStream ShootSound;
+    int damage = 80;
 	public override void _Ready()
     {
+        ShootSoundPlayer = new AudioStreamPlayer();
+        AddChild(ShootSoundPlayer);
+        ShootSound = GD.Load<AudioStream>("res://GRAPHICS/SOUNDS/dspistol.wav");
+
         gun = GetNode<AnimatedSprite2D>("CenterContainer/GUN");
         fire = GetNode<Sprite2D>("CenterContainer/FIRE");
         ray = GetNode<RayCast3D>("RayCast3D");
@@ -28,6 +34,13 @@ public partial class Pistol : Node3D
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
     {
+        if(PlayerStats.playerHealth <= 0)
+        {
+            fire.Visible = false;
+            return;
+        }
+            
+
 		if (!shoot)
         {
 			gun.Play("IDLE");
@@ -35,6 +48,8 @@ public partial class Pistol : Node3D
 
         if(Input.IsActionPressed("Shoot") && !shoot && canShoot)
         {
+            ShootSoundPlayer.Stream = ShootSound;
+            ShootSoundPlayer.Play();
             Shoot();
         }
 

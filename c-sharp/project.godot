@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="CSharp"
-run/main_scene="uid://xjbc1wf4l488"
+run/main_scene="uid://bcbmou5dbgg7"
 config/features=PackedStringArray("4.6", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -23,11 +23,14 @@ config/icon="res://icon.svg"
 
 PlayerStats="*res://ENTITIES/PLAYER/PlayerStats.cs"
 NetworkManager="*res://MULTIPLAYER/NetworkManager.cs"
+MusicManager="*uid://bd7fbbnwxujtj"
 
 [display]
 
+window/size/viewport_width=1280
+window/size/viewport_height=720
 window/stretch/mode="viewport"
-window/stretch/aspect="expand"
+window/stretch/scale=1.1
 
 [dotnet]
 
@@ -35,7 +38,11 @@ project/assembly_name="CSharp"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/terrain_3d/plugin.cfg")
+enabled=PackedStringArray("res://addons/func_godot/plugin.cfg")
+
+[filesystem]
+
+import/blender/enabled=false
 
 [global_group]
 
@@ -131,3 +138,6 @@ Escape={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+textures/decals/filter=0
+textures/light_projectors/filter=0
+occlusion_culling/use_occlusion_culling=true

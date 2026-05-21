@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://byhnet7ynsnft"]
+
+[ext_resource type="PackedScene" uid="uid://bjc82kvwu5nq3" path="res://Models/Blender/MyOwnTiles.glb" id="1_k32w5"]
+
+[node name="MyOwnTiles" unique_id=796785165 instance=ExtResource("1_k32w5")]

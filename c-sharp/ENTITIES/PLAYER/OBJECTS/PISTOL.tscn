@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://i5qaug4uemu7"]
+[gd_scene format=3 uid="uid://i5qaug4uemu7"]
 
 [ext_resource type="Script" uid="uid://c1mi1n4cwxbgv" path="res://ENTITIES/PLAYER/OBJECTS/Pistol.cs" id="1_63m8x"]
 [ext_resource type="Texture2D" uid="uid://53t78yk0t3n3" path="res://GRAPHICS/SPRITES/WEAPONS/pisga0.png" id="1_ktsyl"]
@@ -49,10 +49,10 @@ properties/3/path = NodePath(".:position")
 properties/3/spawn = true
 properties/3/replication_mode = 1
 
-[node name="PISTOL" type="Node3D"]
+[node name="PISTOL" type="Node3D" unique_id=1503777298]
 script = ExtResource("1_63m8x")
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=824247854]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -61,7 +61,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="GUN" type="AnimatedSprite2D" parent="CenterContainer"]
+[node name="GUN" type="AnimatedSprite2D" parent="CenterContainer" unique_id=1021353903]
 texture_filter = 3
 rotation = -3.1415925
 scale = Vector2(3, 3)
@@ -74,15 +74,15 @@ offset = Vector2(-28.5, 0)
 flip_h = true
 flip_v = true
 
-[node name="FIRE" type="Sprite2D" parent="CenterContainer"]
+[node name="FIRE" type="Sprite2D" parent="CenterContainer" unique_id=617182723]
 visible = false
 texture_filter = 1
 position = Vector2(18, -249)
 scale = Vector2(3, 3)
 texture = ExtResource("6_63m8x")
 
-[node name="RayCast3D" type="RayCast3D" parent="."]
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=1237061611]
 target_position = Vector3(0, 0, -100)
 
-[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=1212144467]
 replication_config = SubResource("SceneReplicationConfig_63m8x")

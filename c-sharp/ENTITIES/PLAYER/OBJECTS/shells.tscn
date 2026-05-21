@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bv4oi5mxqmkke"]
+
+[ext_resource type="Script" uid="uid://bpyyjue2h786h" path="res://ENTITIES/PLAYER/OBJECTS/PickUps.cs" id="1_sfmmr"]
+[ext_resource type="Texture2D" uid="uid://dagfs4yl2um7f" path="res://GRAPHICS/SPRITES/PICKUPS/shela0.png" id="2_sfmmr"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_yl3oy"]
+radius = 0.75
+
+[node name="SHELLS" type="Node3D" unique_id=1643986243]
+script = ExtResource("1_sfmmr")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1470532416]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("2_sfmmr")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=890623586]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1327294621]
+shape = SubResource("SphereShape3D_yl3oy")

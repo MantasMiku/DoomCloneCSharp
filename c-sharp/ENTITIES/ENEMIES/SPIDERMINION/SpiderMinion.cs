@@ -40,16 +40,44 @@ public partial class SpiderMinion : CharacterBody3D
     private int tryAttack = 2;
 
     // Stats
-    public int Health = 200;
+    public int Health = 300;
 
     // Movement
     private float smoothRotation;
     private float animSpeed = 8f;
     private Vector3 moveDirection = Vector3.Zero;
+    AudioStreamPlayer3D spiderWalkPlayer;
+    AudioStreamPlayer3D spiderShootPlayer;
+    AudioStreamPlayer3D spiderPlayer;
+    
+
+    PackedScene[] DropPrefabs =
+	{
+		ResourceLoader.Load<PackedScene>("res://ENTITIES/PLAYER/OBJECTS/clip.tscn"),
+		ResourceLoader.Load<PackedScene>("res://ENTITIES/PLAYER/OBJECTS/shells.tscn"),
+        ResourceLoader.Load<PackedScene>("res://ENTITIES/PLAYER/OBJECTS/stim.tscn"),
+	};
+    public int MinDrops = 1;
+	public int MaxDrops = 1;
+	public float DropRadius = 1.0f;
+
+    int scoreValue = 400;
 
     // Godot lifecycle
     public override void _Ready()
     {
+        spiderPlayer = new AudioStreamPlayer3D();
+        AddChild(spiderPlayer);
+		spiderWalkPlayer = new AudioStreamPlayer3D();
+        AddChild(spiderWalkPlayer);
+        spiderShootPlayer = new AudioStreamPlayer3D();
+        AddChild(spiderShootPlayer);
+
+        spiderPlayer.UnitSize = 3;
+        spiderWalkPlayer.UnitSize = 3;
+        spiderShootPlayer.UnitSize = 5;
+
+        spiderWalkPlayer.Stream = GD.Load<AudioStream>("res://GRAPHICS/SOUNDS/SPIDERMINION/WALK.wav");
         InitializeNodes();
         ConnectSignals();
     }
@@ -62,6 +90,22 @@ public partial class SpiderMinion : CharacterBody3D
         UpdateAnimations();
         UpdateMovement(delta);
         MoveAndSlide();
+        bool canPlayWalkSound = Velocity.Length() > 0.1f && !isHit && !attack;
+
+		if (canPlayWalkSound)
+		{
+			if (!spiderWalkPlayer.Playing)
+			{
+				spiderWalkPlayer.Play();
+			}
+		}
+		else
+		{
+			if (spiderWalkPlayer.Playing)
+			{
+				spiderWalkPlayer.Stop();
+			}
+		}
     }
 
     // Initialization
@@ -395,10 +439,14 @@ public partial class SpiderMinion : CharacterBody3D
     {
         if (!dead)
         {
+            DropLoot();
             dead = true;
             anim.Play("DEATH");
+            PlayerStats.ChangeScore(scoreValue);
+            spiderPlayer.Stream = GD.Load<AudioStream>("res://GRAPHICS/SOUNDS/SPIDERMINION/DEATH.wav");
+            spiderPlayer.Play();
         }
-
+        
         owner?.DetectMinionDeath(this);
         RemoveFromGroup("MINION");
         GetNode<CollisionShape3D>("CollisionShape3D").Disabled = true;
@@ -406,6 +454,29 @@ public partial class SpiderMinion : CharacterBody3D
         SetProcess(false);
         await ToSignal(anim, AnimationPlayer.SignalName.AnimationFinished);
     }
+    private void DropLoot()
+	{
+		if (DropPrefabs == null || DropPrefabs.Length == 0)
+			return;
+
+		int dropCount = (int)GD.RandRange(MinDrops, MaxDrops);
+
+		for (int i = 0; i < dropCount; i++)
+		{
+			PackedScene scene = DropPrefabs[GD.RandRange(0, DropPrefabs.Length - 1)];
+			if (scene == null)
+				continue;
+
+			Node3D pickup = scene.Instantiate<Node3D>();
+
+			float angle = (float)GD.RandRange(0, Mathf.Tau);
+			float radius = (float)GD.RandRange(0.2f, DropRadius);
+			Vector3 offset = new Vector3(Mathf.Cos(angle) * radius, 0.2f, Mathf.Sin(angle) * radius);
+
+            GetParent().AddChild(pickup);
+			pickup.GlobalPosition = GlobalPosition + offset;
+		}
+	}
 
     private void OnAnimationFinished()
     {
@@ -417,7 +488,8 @@ public partial class SpiderMinion : CharacterBody3D
     private void OnShootCooldown()
     {
         var rayHit = ray.GetCollider();
-
+        spiderShootPlayer.Stream = GD.Load<AudioStream>("res://GRAPHICS/SOUNDS/dspistol.wav");
+        spiderShootPlayer.Play();
         if (rayHit is TestPlayer testPlayer)
         {
             GD.Print(testPlayer.crouchSlide);
@@ -452,6 +524,11 @@ public partial class SpiderMinion : CharacterBody3D
         if (Health <= 0)
             PlayDeathAnimation();
         else
+        { 
             isHit = true;
+            spiderPlayer.Stream = GD.Load<AudioStream>("res://GRAPHICS/SOUNDS/SPIDERDEMON/HURT.wav");
+            spiderPlayer.Play();
+        }
+            
     }
 }

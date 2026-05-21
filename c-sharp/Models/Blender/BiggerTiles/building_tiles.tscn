@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cj7j2efdpsr0"]
+
+[ext_resource type="PackedScene" uid="uid://dutsm1n2iqubx" path="res://Models/Blender/BiggerTiles/BuildingTiles.glb" id="1_3yed1"]
+
+[sub_resource type="BoxOccluder3D" id="BoxOccluder3D_3yed1"]
+size = Vector3(45, 1, 17)
+
+[node name="BuildingTiles" unique_id=881423106 instance=ExtResource("1_3yed1")]
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="." index="15" unique_id=480785635]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 3)
+occluder = SubResource("BoxOccluder3D_3yed1")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://bcbmou5dbgg7"]
+[gd_scene format=3 uid="uid://bcbmou5dbgg7"]
 
 [ext_resource type="Script" uid="uid://buyi4v3go3gmj" path="res://LEVELS/UI/MainUI.cs" id="1_wrovc"]
 [ext_resource type="Texture2D" uid="uid://bpnfyhc02kgjo" path="res://GRAPHICS/UI/Textures/Frame/Frame_background.png" id="2_4klea"]
@@ -7,48 +7,52 @@
 [ext_resource type="FontFile" uid="uid://dj3pnuonj0si5" path="res://GRAPHICS/FONTS/Gothic Pixels.ttf" id="4_wrovc"]
 [ext_resource type="Theme" uid="uid://gex1206hikt5" path="res://LEVELS/UI/MenuTheme.tres" id="7_4klea"]
 [ext_resource type="Texture2D" uid="uid://cshcxp3yt6r1a" path="res://GRAPHICS/UI/Textures/Frame/Frame_main_menu.png" id="9_exr7i"]
+[ext_resource type="Texture2D" uid="uid://ct65a3733l1w3" path="res://GRAPHICS/SPRITES/ENEMIES/IMP/trooa1.png" id="10_4pw7p"]
 [ext_resource type="FontFile" uid="uid://baw60ydl0csea" path="res://GRAPHICS/FONTS/gothic-pixel-font.ttf" id="10_hnvtc"]
 [ext_resource type="Texture2D" uid="uid://dnq6t44yda3gv" path="res://GRAPHICS/SPRITES/ENEMIES/heada1.png" id="10_umoh2"]
 [ext_resource type="Texture2D" uid="uid://digfb256wogmx" path="res://GRAPHICS/UI/Textures/Frame/Frame_outline.png" id="10_wrovc"]
+[ext_resource type="Texture2D" uid="uid://dw2vwvlxxxo0v" path="res://GRAPHICS/SPRITES/ENEMIES/IMP/troob1.png" id="11_adf70"]
 [ext_resource type="Texture2D" uid="uid://c50avbsdtm34a" path="res://GRAPHICS/SPRITES/ENEMIES/heada2a8.png" id="11_kms1b"]
 [ext_resource type="Texture2D" uid="uid://cb1f25hdtfv6u" path="res://GRAPHICS/SPRITES/ENEMIES/heade1.png" id="11_ptlct"]
 [ext_resource type="Texture2D" uid="uid://b7fgtpo03hv7o" path="res://GRAPHICS/SPRITES/ENEMIES/headb1.png" id="11_umowp"]
 [ext_resource type="Shader" uid="uid://dl5c4harf2t7a" path="res://LEVELS/UI/CRT.gdshader" id="11_wrovc"]
 [ext_resource type="Texture2D" uid="uid://dntt63j5ikvxd" path="res://GRAPHICS/SPRITES/ENEMIES/heada3a7.png" id="12_kugkb"]
+[ext_resource type="Texture2D" uid="uid://bh6hs4eb1h1s0" path="res://GRAPHICS/SPRITES/ENEMIES/IMP/trooc1.png" id="12_ovcrd"]
 [ext_resource type="Texture2D" uid="uid://cejri1vq0q366" path="res://GRAPHICS/SPRITES/ENEMIES/headc1.png" id="12_yccyu"]
 [ext_resource type="Texture2D" uid="uid://ccieaequbk2k2" path="res://GRAPHICS/SPRITES/ENEMIES/heada4a6.png" id="13_i21rt"]
+[ext_resource type="Texture2D" uid="uid://de451wh0w2jax" path="res://GRAPHICS/SPRITES/ENEMIES/IMP/trood1.png" id="13_qm4ug"]
 [ext_resource type="Texture2D" uid="uid://qn3oongrm744" path="res://GRAPHICS/SPRITES/ENEMIES/headd1.png" id="13_wioyi"]
 [ext_resource type="Texture2D" uid="uid://bp7ely6i2io15" path="res://GRAPHICS/SPRITES/ENEMIES/heada5.png" id="14_mpywn"]
-[ext_resource type="Texture2D" uid="uid://by2yhxtua46gk" path="res://GRAPHICS/SPRITES/ENEMIES/cybre1.png" id="15_4s7pq"]
-[ext_resource type="Texture2D" uid="uid://cly2jxxfsxuwa" path="res://GRAPHICS/SPRITES/ENEMIES/cybra1.png" id="15_wxvve"]
-[ext_resource type="Texture2D" uid="uid://bn06rgjpdf7la" path="res://GRAPHICS/SPRITES/ENEMIES/cybrb1.png" id="16_li60i"]
-[ext_resource type="Texture2D" uid="uid://dexam06jutfdu" path="res://GRAPHICS/SPRITES/ENEMIES/cybrf1.png" id="16_wxvve"]
-[ext_resource type="Texture2D" uid="uid://b545kk77vy1r0" path="res://GRAPHICS/SPRITES/ENEMIES/cybrc1.png" id="17_umowp"]
-[ext_resource type="Texture2D" uid="uid://bnw4obuwnbh02" path="res://GRAPHICS/SPRITES/ENEMIES/cybrd1.png" id="18_yccyu"]
-[ext_resource type="Texture2D" uid="uid://gvb0s8ming84" path="res://GRAPHICS/SPRITES/ENEMIES/cybra2.png" id="19_wioyi"]
-[ext_resource type="Texture2D" uid="uid://bu0o7m6qx1xkk" path="res://GRAPHICS/SPRITES/ENEMIES/cybra3.png" id="20_jxvge"]
-[ext_resource type="Texture2D" uid="uid://xo5kqxghy2xb" path="res://GRAPHICS/SPRITES/ENEMIES/cybra4.png" id="21_rcj7d"]
-[ext_resource type="Texture2D" uid="uid://cd6ejb74dmg51" path="res://GRAPHICS/SPRITES/ENEMIES/cybra5.png" id="22_1wpg0"]
-[ext_resource type="Texture2D" uid="uid://cc52trtaeghsq" path="res://GRAPHICS/SPRITES/ENEMIES/cybra6.png" id="23_r1g4o"]
-[ext_resource type="Texture2D" uid="uid://7fo1tatw86l2" path="res://GRAPHICS/SPRITES/ENEMIES/cybra7.png" id="24_ptlct"]
-[ext_resource type="Texture2D" uid="uid://l1kejuyeo5oy" path="res://GRAPHICS/SPRITES/ENEMIES/cybra8.png" id="25_cqrtc"]
-[ext_resource type="Texture2D" uid="uid://xu5qrdpmx5rh" path="res://GRAPHICS/SPRITES/ENEMIES/playa1.png" id="28_jyvb1"]
-[ext_resource type="Texture2D" uid="uid://bw62xmg2v7klq" path="res://GRAPHICS/SPRITES/ENEMIES/playa2a8.png" id="29_bn3v8"]
-[ext_resource type="Texture2D" uid="uid://b6cnjyhluj72n" path="res://GRAPHICS/SPRITES/ENEMIES/playa3a7.png" id="30_2n2r4"]
-[ext_resource type="Texture2D" uid="uid://yjlhg3mqx46d" path="res://GRAPHICS/SPRITES/ENEMIES/playa4a6.png" id="31_j8k7y"]
-[ext_resource type="Texture2D" uid="uid://r4f5pvn1cc3n" path="res://GRAPHICS/SPRITES/ENEMIES/playa5.png" id="32_qi6cv"]
-[ext_resource type="Texture2D" uid="uid://w1584j1s42b" path="res://GRAPHICS/SPRITES/ENEMIES/playb1.png" id="33_cqrtc"]
-[ext_resource type="Texture2D" uid="uid://dj187leliexha" path="res://GRAPHICS/SPRITES/ENEMIES/playc1.png" id="34_8w4nu"]
-[ext_resource type="Texture2D" uid="uid://ced8v8d0s53wf" path="res://GRAPHICS/SPRITES/ENEMIES/playd1.png" id="35_12n3j"]
-[ext_resource type="Texture2D" uid="uid://cr0mtioxmlobn" path="res://GRAPHICS/SPRITES/ENEMIES/playh0.png" id="36_j8k7y"]
-[ext_resource type="Texture2D" uid="uid://dg0rov8nfgmba" path="res://GRAPHICS/SPRITES/ENEMIES/playi0.png" id="37_qi6cv"]
-[ext_resource type="Texture2D" uid="uid://ci0ybh6me1q5r" path="res://GRAPHICS/SPRITES/ENEMIES/playj0.png" id="38_mocuv"]
-[ext_resource type="Texture2D" uid="uid://b6vxmx2bvkvtv" path="res://GRAPHICS/SPRITES/ENEMIES/playk0.png" id="39_4pw7p"]
-[ext_resource type="Texture2D" uid="uid://bhn6t1vfcvqt" path="res://GRAPHICS/SPRITES/ENEMIES/playf2f8.png" id="39_cqrtc"]
-[ext_resource type="Texture2D" uid="uid://b15bjqwobhv2i" path="res://GRAPHICS/SPRITES/ENEMIES/playe2e8.png" id="40_8w4nu"]
-[ext_resource type="Texture2D" uid="uid://bu27w076ej88h" path="res://GRAPHICS/SPRITES/ENEMIES/playl0.png" id="40_adf70"]
-[ext_resource type="Texture2D" uid="uid://ynpricjo12mj" path="res://GRAPHICS/SPRITES/ENEMIES/playm0.png" id="41_ovcrd"]
-[ext_resource type="Texture2D" uid="uid://bj5ao5bbtb7yg" path="res://GRAPHICS/SPRITES/ENEMIES/playn0.png" id="42_qm4ug"]
+[ext_resource type="Texture2D" uid="uid://by2yhxtua46gk" path="res://GRAPHICS/SPRITES/ENEMIES/CYBERDEMON/cybre1.png" id="15_4s7pq"]
+[ext_resource type="Texture2D" uid="uid://cly2jxxfsxuwa" path="res://GRAPHICS/SPRITES/ENEMIES/CYBERDEMON/cybra1.png" id="15_wxvve"]
+[ext_resource type="Texture2D" uid="uid://bn06rgjpdf7la" path="res://GRAPHICS/SPRITES/ENEMIES/CYBERDEMON/cybrb1.png" id="16_li60i"]
+[ext_resource type="Texture2D" uid="uid://dexam06jutfdu" path="res://GRAPHICS/SPRITES/ENEMIES/CYBERDEMON/cybrf1.png" id="16_wxvve"]
+[ext_resource type="Texture2D" uid="uid://b545kk77vy1r0" path="res://GRAPHICS/SPRITES/ENEMIES/CYBERDEMON/cybrc1.png" id="17_umowp"]
+[ext_resource type="Texture2D" uid="uid://bnw4obuwnbh02" path="res://GRAPHICS/SPRITES/ENEMIES/CYBERDEMON/cybrd1.png" id="18_yccyu"]
+[ext_resource type="Texture2D" uid="uid://gvb0s8ming84" path="res://GRAPHICS/SPRITES/ENEMIES/CYBERDEMON/cybra2.png" id="19_wioyi"]
+[ext_resource type="Texture2D" uid="uid://bu0o7m6qx1xkk" path="res://GRAPHICS/SPRITES/ENEMIES/CYBERDEMON/cybra3.png" id="20_jxvge"]
+[ext_resource type="Texture2D" uid="uid://xo5kqxghy2xb" path="res://GRAPHICS/SPRITES/ENEMIES/CYBERDEMON/cybra4.png" id="21_rcj7d"]
+[ext_resource type="Texture2D" uid="uid://cd6ejb74dmg51" path="res://GRAPHICS/SPRITES/ENEMIES/CYBERDEMON/cybra5.png" id="22_1wpg0"]
+[ext_resource type="Texture2D" uid="uid://cc52trtaeghsq" path="res://GRAPHICS/SPRITES/ENEMIES/CYBERDEMON/cybra6.png" id="23_r1g4o"]
+[ext_resource type="Texture2D" uid="uid://7fo1tatw86l2" path="res://GRAPHICS/SPRITES/ENEMIES/CYBERDEMON/cybra7.png" id="24_ptlct"]
+[ext_resource type="Texture2D" uid="uid://l1kejuyeo5oy" path="res://GRAPHICS/SPRITES/ENEMIES/CYBERDEMON/cybra8.png" id="25_cqrtc"]
+[ext_resource type="Texture2D" uid="uid://xu5qrdpmx5rh" path="res://GRAPHICS/SPRITES/ENEMIES/PLAYER/playa1.png" id="28_jyvb1"]
+[ext_resource type="Texture2D" uid="uid://bw62xmg2v7klq" path="res://GRAPHICS/SPRITES/ENEMIES/PLAYER/playa2a8.png" id="29_bn3v8"]
+[ext_resource type="Texture2D" uid="uid://b6cnjyhluj72n" path="res://GRAPHICS/SPRITES/ENEMIES/PLAYER/playa3a7.png" id="30_2n2r4"]
+[ext_resource type="Texture2D" uid="uid://yjlhg3mqx46d" path="res://GRAPHICS/SPRITES/ENEMIES/PLAYER/playa4a6.png" id="31_j8k7y"]
+[ext_resource type="Texture2D" uid="uid://r4f5pvn1cc3n" path="res://GRAPHICS/SPRITES/ENEMIES/PLAYER/playa5.png" id="32_qi6cv"]
+[ext_resource type="Texture2D" uid="uid://w1584j1s42b" path="res://GRAPHICS/SPRITES/ENEMIES/PLAYER/playb1.png" id="33_cqrtc"]
+[ext_resource type="Texture2D" uid="uid://dj187leliexha" path="res://GRAPHICS/SPRITES/ENEMIES/PLAYER/playc1.png" id="34_8w4nu"]
+[ext_resource type="Texture2D" uid="uid://ced8v8d0s53wf" path="res://GRAPHICS/SPRITES/ENEMIES/PLAYER/playd1.png" id="35_12n3j"]
+[ext_resource type="Texture2D" uid="uid://cr0mtioxmlobn" path="res://GRAPHICS/SPRITES/ENEMIES/PLAYER/playh0.png" id="36_j8k7y"]
+[ext_resource type="Texture2D" uid="uid://dg0rov8nfgmba" path="res://GRAPHICS/SPRITES/ENEMIES/PLAYER/playi0.png" id="37_qi6cv"]
+[ext_resource type="Texture2D" uid="uid://ci0ybh6me1q5r" path="res://GRAPHICS/SPRITES/ENEMIES/PLAYER/playj0.png" id="38_mocuv"]
+[ext_resource type="Texture2D" uid="uid://b6vxmx2bvkvtv" path="res://GRAPHICS/SPRITES/ENEMIES/PLAYER/playk0.png" id="39_4pw7p"]
+[ext_resource type="Texture2D" uid="uid://bhn6t1vfcvqt" path="res://GRAPHICS/SPRITES/ENEMIES/PLAYER/playf2f8.png" id="39_cqrtc"]
+[ext_resource type="Texture2D" uid="uid://b15bjqwobhv2i" path="res://GRAPHICS/SPRITES/ENEMIES/PLAYER/playe2e8.png" id="40_8w4nu"]
+[ext_resource type="Texture2D" uid="uid://bu27w076ej88h" path="res://GRAPHICS/SPRITES/ENEMIES/PLAYER/playl0.png" id="40_adf70"]
+[ext_resource type="Texture2D" uid="uid://ynpricjo12mj" path="res://GRAPHICS/SPRITES/ENEMIES/PLAYER/playm0.png" id="41_ovcrd"]
+[ext_resource type="Texture2D" uid="uid://bj5ao5bbtb7yg" path="res://GRAPHICS/SPRITES/ENEMIES/PLAYER/playn0.png" id="42_qm4ug"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_exr7i"]
 texture = ExtResource("9_exr7i")
@@ -313,6 +317,26 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_adf70"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_4pw7p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_adf70")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ovcrd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_qm4ug")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 4.0
+}]
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hnvtc"]
 shader = ExtResource("11_wrovc")
 shader_parameter/overlay = false
@@ -337,7 +361,7 @@ shader_parameter/clip_warp = false
 shader_parameter/vignette_intensity = 0.4
 shader_parameter/vignette_opacity = 0.5
 
-[node name="MainMenu" type="Control"]
+[node name="MainMenu" type="Control" unique_id=1558695643]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -350,7 +374,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_wrovc")
 
-[node name="NinePatchRect" type="NinePatchRect" parent="."]
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1919979261]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -369,7 +393,7 @@ size_flags_vertical = 0
 texture = ExtResource("2_exr7i")
 region_rect = Rect2(64, 64, 896, 1120)
 
-[node name="Back2" type="NinePatchRect" parent="."]
+[node name="Back2" type="NinePatchRect" parent="." unique_id=1798762299]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -387,7 +411,7 @@ patch_margin_top = 155
 patch_margin_right = 320
 patch_margin_bottom = 200
 
-[node name="Back1" type="NinePatchRect" parent="."]
+[node name="Back1" type="NinePatchRect" parent="." unique_id=1999974105]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -404,7 +428,7 @@ patch_margin_bottom = 200
 axis_stretch_horizontal = 2
 axis_stretch_vertical = 2
 
-[node name="Border" type="NinePatchRect" parent="."]
+[node name="Border" type="NinePatchRect" parent="." unique_id=246880435]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -421,7 +445,7 @@ patch_margin_bottom = 200
 axis_stretch_horizontal = 2
 axis_stretch_vertical = 2
 
-[node name="Main" type="MarginContainer" parent="."]
+[node name="Main" type="MarginContainer" parent="." unique_id=408295364]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -430,21 +454,21 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_bottom = -4
 
-[node name="TextureRect" type="TextureRect" parent="Main"]
+[node name="TextureRect" type="TextureRect" parent="Main" unique_id=402120530]
 visible = false
 layout_mode = 2
 texture = ExtResource("4_hnvtc")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Main"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Main" unique_id=578784052]
 layout_mode = 2
 theme_override_constants/separation = 60
 
-[node name="Separator" type="Control" parent="Main/VBoxContainer"]
+[node name="Separator" type="Control" parent="Main/VBoxContainer" unique_id=1880764714]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Main/VBoxContainer"]
+[node name="Label" type="Label" parent="Main/VBoxContainer" unique_id=876978212]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
 theme_override_colors/font_outline_color = Color(0.21568628, 0.21568628, 0.21568628, 1)
@@ -455,20 +479,20 @@ text = "The Game lll"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Main/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Main/VBoxContainer" unique_id=318783940]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Main/VBoxContainer/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/VBoxContainer/HBoxContainer" unique_id=1154573231]
 layout_mode = 2
 theme_override_constants/separation = 6
 alignment = 1
 
-[node name="Separator" type="Control" parent="Main/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Separator" type="Control" parent="Main/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=434659349]
 layout_mode = 2
 
-[node name="Start" type="Button" parent="Main/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Start" type="Button" parent="Main/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1346683163]
 custom_minimum_size = Vector2(160, 45)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -491,7 +515,7 @@ theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("4_wrovc")
 theme_override_font_sizes/font_size = 25
 
-[node name="Label" type="Label" parent="Main/VBoxContainer/HBoxContainer/VBoxContainer/Start"]
+[node name="Label" type="Label" parent="Main/VBoxContainer/HBoxContainer/VBoxContainer/Start" unique_id=1117215367]
 custom_minimum_size = Vector2(0.085, 0)
 layout_mode = 1
 anchors_preset = 7
@@ -512,10 +536,10 @@ text = "Start"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Separator3" type="Control" parent="Main/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Separator3" type="Control" parent="Main/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=283948306]
 layout_mode = 2
 
-[node name="Options" type="Button" parent="Main/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Options" type="Button" parent="Main/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=725147767]
 custom_minimum_size = Vector2(160, 45)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -538,7 +562,7 @@ theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("4_wrovc")
 theme_override_font_sizes/font_size = 25
 
-[node name="Label" type="Label" parent="Main/VBoxContainer/HBoxContainer/VBoxContainer/Options"]
+[node name="Label" type="Label" parent="Main/VBoxContainer/HBoxContainer/VBoxContainer/Options" unique_id=1527654878]
 custom_minimum_size = Vector2(0.085, 0)
 layout_mode = 1
 anchors_preset = 7
@@ -559,10 +583,10 @@ text = "Options"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Separator2" type="Control" parent="Main/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Separator2" type="Control" parent="Main/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1156521370]
 layout_mode = 2
 
-[node name="Exit" type="Button" parent="Main/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Exit" type="Button" parent="Main/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1621117209]
 custom_minimum_size = Vector2(160, 45)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -585,7 +609,7 @@ theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("4_wrovc")
 theme_override_font_sizes/font_size = 25
 
-[node name="Label" type="Label" parent="Main/VBoxContainer/HBoxContainer/VBoxContainer/Exit"]
+[node name="Label" type="Label" parent="Main/VBoxContainer/HBoxContainer/VBoxContainer/Exit" unique_id=1935206507]
 custom_minimum_size = Vector2(0.085, 0)
 layout_mode = 1
 anchors_preset = 7
@@ -606,7 +630,7 @@ text = "Exit"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="PopUp" type="MarginContainer" parent="."]
+[node name="PopUp" type="MarginContainer" parent="." unique_id=1055929074]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -621,14 +645,14 @@ offset_bottom = 75.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Panel" type="Panel" parent="PopUp"]
+[node name="Panel" type="Panel" parent="PopUp" unique_id=952759898]
 custom_minimum_size = Vector2(462.34, 211.51)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxTexture_exr7i")
 
-[node name="Label" type="Label" parent="PopUp"]
+[node name="Label" type="Label" parent="PopUp" unique_id=1395696192]
 custom_minimum_size = Vector2(100, 80)
 layout_mode = 2
 size_flags_vertical = 0
@@ -641,21 +665,21 @@ text = "Do you want to quit?"
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PopUp"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PopUp" unique_id=597995803]
 layout_mode = 2
 theme_override_constants/separation = 75
 
-[node name="Separator2" type="Control" parent="PopUp/HBoxContainer"]
+[node name="Separator2" type="Control" parent="PopUp/HBoxContainer" unique_id=402561751]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PopUp/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PopUp/HBoxContainer" unique_id=619441028]
 layout_mode = 2
 theme_override_constants/separation = 105
 
-[node name="Separator2" type="Control" parent="PopUp/HBoxContainer/VBoxContainer"]
+[node name="Separator2" type="Control" parent="PopUp/HBoxContainer/VBoxContainer" unique_id=895684955]
 layout_mode = 2
 
-[node name="Exit" type="Button" parent="PopUp/HBoxContainer/VBoxContainer"]
+[node name="Exit" type="Button" parent="PopUp/HBoxContainer/VBoxContainer" unique_id=2141794003]
 custom_minimum_size = Vector2(120, 35)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -678,7 +702,7 @@ theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("4_wrovc")
 theme_override_font_sizes/font_size = 25
 
-[node name="Label" type="Label" parent="PopUp/HBoxContainer/VBoxContainer/Exit"]
+[node name="Label" type="Label" parent="PopUp/HBoxContainer/VBoxContainer/Exit" unique_id=1178777317]
 custom_minimum_size = Vector2(0.085, 0)
 layout_mode = 1
 anchors_preset = 7
@@ -699,14 +723,14 @@ text = "Exit"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="PopUp/HBoxContainer"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="PopUp/HBoxContainer" unique_id=1510073364]
 layout_mode = 2
 theme_override_constants/separation = 105
 
-[node name="Separator2" type="Control" parent="PopUp/HBoxContainer/VBoxContainer2"]
+[node name="Separator2" type="Control" parent="PopUp/HBoxContainer/VBoxContainer2" unique_id=255961552]
 layout_mode = 2
 
-[node name="Stay" type="Button" parent="PopUp/HBoxContainer/VBoxContainer2"]
+[node name="Stay" type="Button" parent="PopUp/HBoxContainer/VBoxContainer2" unique_id=1178891126]
 custom_minimum_size = Vector2(120, 35)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -729,7 +753,7 @@ theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("4_wrovc")
 theme_override_font_sizes/font_size = 25
 
-[node name="Label" type="Label" parent="PopUp/HBoxContainer/VBoxContainer2/Stay"]
+[node name="Label" type="Label" parent="PopUp/HBoxContainer/VBoxContainer2/Stay" unique_id=424773536]
 custom_minimum_size = Vector2(0.085, 0)
 layout_mode = 1
 anchors_preset = 7
@@ -750,7 +774,7 @@ text = "Stay"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Options" type="MarginContainer" parent="."]
+[node name="Options" type="MarginContainer" parent="." unique_id=2060378012]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -759,31 +783,31 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="Options"]
+[node name="TextureRect" type="TextureRect" parent="Options" unique_id=1333424789]
 visible = false
 layout_mode = 2
 texture = ExtResource("9_exr7i")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Options"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Options" unique_id=1164918495]
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_constants/separation = 8
 
-[node name="Separator2" type="Control" parent="Options/VBoxContainer"]
+[node name="Separator2" type="Control" parent="Options/VBoxContainer" unique_id=865565918]
 layout_mode = 2
 
-[node name="Separator3" type="Control" parent="Options/VBoxContainer"]
+[node name="Separator3" type="Control" parent="Options/VBoxContainer" unique_id=1573114184]
 layout_mode = 2
 
-[node name="Separator4" type="Control" parent="Options/VBoxContainer"]
+[node name="Separator4" type="Control" parent="Options/VBoxContainer" unique_id=79040701]
 layout_mode = 2
 
-[node name="Separator" type="Control" parent="Options/VBoxContainer"]
+[node name="Separator" type="Control" parent="Options/VBoxContainer" unique_id=1179656550]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Options/VBoxContainer"]
+[node name="Label" type="Label" parent="Options/VBoxContainer" unique_id=254115604]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
 theme_override_colors/font_outline_color = Color(0.21568628, 0.21568628, 0.21568628, 1)
@@ -794,14 +818,14 @@ text = "Options"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="NinePatchRect" type="NinePatchRect" parent="Options/VBoxContainer"]
+[node name="NinePatchRect" type="NinePatchRect" parent="Options/VBoxContainer" unique_id=1573747561]
 custom_minimum_size = Vector2(460, 495)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 texture = ExtResource("10_wrovc")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Options/VBoxContainer/NinePatchRect"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Options/VBoxContainer/NinePatchRect" unique_id=1236939756]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -810,21 +834,21 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 32
 
-[node name="HSeparator" type="HSeparator" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer" unique_id=1069453684]
 layout_mode = 2
 theme_override_constants/separation = 32
 theme_override_styles/separator = SubResource("StyleBoxEmpty_qi6cv")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer" unique_id=2131501792]
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="VSeparator2" type="VSeparator" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer"]
+[node name="VSeparator2" type="VSeparator" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer" unique_id=1661994398]
 layout_mode = 2
 theme_override_constants/separation = 64
 theme_override_styles/separator = SubResource("StyleBoxEmpty_mocuv")
 
-[node name="Label" type="Label" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer" unique_id=718311102]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
 theme_override_colors/font_outline_color = Color(0.21568628, 0.21568628, 0.21568628, 1)
@@ -835,26 +859,26 @@ text = "Music"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VSeparator" type="VSeparator" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer"]
+[node name="VSeparator" type="VSeparator" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer" unique_id=929671536]
 layout_mode = 2
 theme_override_constants/separation = 32
 theme_override_styles/separator = SubResource("StyleBoxEmpty_mocuv")
 
-[node name="HSlider" type="HSlider" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer"]
+[node name="HSlider" type="HSlider" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer" unique_id=1074279744]
 custom_minimum_size = Vector2(200, 30)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer" unique_id=1325021174]
 layout_mode = 2
 
-[node name="VSeparator2" type="VSeparator" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer2"]
+[node name="VSeparator2" type="VSeparator" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer2" unique_id=428425837]
 layout_mode = 2
 theme_override_constants/separation = 64
 theme_override_styles/separator = SubResource("StyleBoxEmpty_mocuv")
 
-[node name="Label" type="Label" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer2"]
+[node name="Label" type="Label" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer2" unique_id=765572105]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
 theme_override_colors/font_outline_color = Color(0.21568628, 0.21568628, 0.21568628, 1)
@@ -865,26 +889,26 @@ text = "Sound fx"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VSeparator" type="VSeparator" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer2"]
+[node name="VSeparator" type="VSeparator" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer2" unique_id=1010352866]
 layout_mode = 2
 theme_override_constants/separation = 32
 theme_override_styles/separator = SubResource("StyleBoxEmpty_mocuv")
 
-[node name="HSlider" type="HSlider" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer2"]
+[node name="HSlider" type="HSlider" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer2" unique_id=1761515164]
 custom_minimum_size = Vector2(200, 30)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer"]
+[node name="HBoxContainer3" type="HBoxContainer" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer" unique_id=867674351]
 layout_mode = 2
 
-[node name="VSeparator2" type="VSeparator" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer3"]
+[node name="VSeparator2" type="VSeparator" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer3" unique_id=1692658173]
 layout_mode = 2
 theme_override_constants/separation = 64
 theme_override_styles/separator = SubResource("StyleBoxEmpty_mocuv")
 
-[node name="Label" type="Label" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer3"]
+[node name="Label" type="Label" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer3" unique_id=466029631]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
 theme_override_colors/font_outline_color = Color(0.21568628, 0.21568628, 0.21568628, 1)
@@ -895,25 +919,25 @@ text = "Resolution"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VSeparator" type="VSeparator" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer3"]
+[node name="VSeparator" type="VSeparator" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer3" unique_id=263256365]
 layout_mode = 2
 theme_override_constants/separation = 32
 theme_override_styles/separator = SubResource("StyleBoxEmpty_mocuv")
 
-[node name="CheckBox" type="CheckBox" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer3"]
+[node name="CheckBox" type="CheckBox" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer3" unique_id=461741246]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="HBoxContainer4" type="HBoxContainer" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer"]
+[node name="HBoxContainer4" type="HBoxContainer" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer" unique_id=1705701482]
 layout_mode = 2
 
-[node name="VSeparator2" type="VSeparator" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer4"]
+[node name="VSeparator2" type="VSeparator" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer4" unique_id=1428220893]
 layout_mode = 2
 theme_override_constants/separation = 64
 theme_override_styles/separator = SubResource("StyleBoxEmpty_mocuv")
 
-[node name="Label" type="Label" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer4"]
+[node name="Label" type="Label" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer4" unique_id=950703775]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
 theme_override_colors/font_outline_color = Color(0.21568628, 0.21568628, 0.21568628, 1)
@@ -924,25 +948,25 @@ text = "FullScreen"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VSeparator" type="VSeparator" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer4"]
+[node name="VSeparator" type="VSeparator" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer4" unique_id=636998643]
 layout_mode = 2
 theme_override_constants/separation = 32
 theme_override_styles/separator = SubResource("StyleBoxEmpty_mocuv")
 
-[node name="CheckBox" type="CheckBox" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer4"]
+[node name="CheckBox" type="CheckBox" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer4" unique_id=1875666399]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="HBoxContainer5" type="HBoxContainer" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer"]
+[node name="HBoxContainer5" type="HBoxContainer" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer" unique_id=632571901]
 layout_mode = 2
 
-[node name="VSeparator2" type="VSeparator" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer5"]
+[node name="VSeparator2" type="VSeparator" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer5" unique_id=1322828438]
 layout_mode = 2
 theme_override_constants/separation = 64
 theme_override_styles/separator = SubResource("StyleBoxEmpty_mocuv")
 
-[node name="Label" type="Label" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer5"]
+[node name="Label" type="Label" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer5" unique_id=1782044598]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
 theme_override_colors/font_outline_color = Color(0.21568628, 0.21568628, 0.21568628, 1)
@@ -953,25 +977,25 @@ text = "Shader"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VSeparator" type="VSeparator" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer5"]
+[node name="VSeparator" type="VSeparator" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer5" unique_id=1456843273]
 layout_mode = 2
 theme_override_constants/separation = 32
 theme_override_styles/separator = SubResource("StyleBoxEmpty_mocuv")
 
-[node name="CheckBox" type="CheckBox" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer5"]
+[node name="CheckBox" type="CheckBox" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer5" unique_id=1165876237]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="HBoxContainer6" type="HBoxContainer" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer"]
+[node name="HBoxContainer6" type="HBoxContainer" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer" unique_id=1644729134]
 layout_mode = 2
 
-[node name="VSeparator2" type="VSeparator" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer6"]
+[node name="VSeparator2" type="VSeparator" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer6" unique_id=358439856]
 layout_mode = 2
 theme_override_constants/separation = 64
 theme_override_styles/separator = SubResource("StyleBoxEmpty_mocuv")
 
-[node name="Label" type="Label" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer6"]
+[node name="Label" type="Label" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer6" unique_id=1213384070]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
 theme_override_colors/font_outline_color = Color(0.21568628, 0.21568628, 0.21568628, 1)
@@ -982,18 +1006,18 @@ text = "Sound"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VSeparator" type="VSeparator" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer6"]
+[node name="VSeparator" type="VSeparator" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer6" unique_id=613857545]
 layout_mode = 2
 theme_override_constants/separation = 32
 theme_override_styles/separator = SubResource("StyleBoxEmpty_mocuv")
 
-[node name="HSlider" type="HSlider" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer6"]
+[node name="HSlider" type="HSlider" parent="Options/VBoxContainer/NinePatchRect/VBoxContainer/HBoxContainer6" unique_id=2066867708]
 custom_minimum_size = Vector2(200, 30)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Levels" type="MarginContainer" parent="."]
+[node name="Levels" type="MarginContainer" parent="." unique_id=824618627]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -1002,24 +1026,24 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Levels"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Levels" unique_id=723005108]
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_constants/separation = 8
 
-[node name="Separator2" type="Control" parent="Levels/VBoxContainer"]
+[node name="Separator2" type="Control" parent="Levels/VBoxContainer" unique_id=710612242]
 layout_mode = 2
 
-[node name="Separator3" type="Control" parent="Levels/VBoxContainer"]
+[node name="Separator3" type="Control" parent="Levels/VBoxContainer" unique_id=1112420440]
 layout_mode = 2
 
-[node name="Separator4" type="Control" parent="Levels/VBoxContainer"]
+[node name="Separator4" type="Control" parent="Levels/VBoxContainer" unique_id=210701365]
 layout_mode = 2
 
-[node name="Separator" type="Control" parent="Levels/VBoxContainer"]
+[node name="Separator" type="Control" parent="Levels/VBoxContainer" unique_id=607536359]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Levels/VBoxContainer"]
+[node name="Label" type="Label" parent="Levels/VBoxContainer" unique_id=575390748]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
 theme_override_colors/font_outline_color = Color(0.21568628, 0.21568628, 0.21568628, 1)
@@ -1030,14 +1054,14 @@ text = "Level Select"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Panel" type="Panel" parent="Levels/VBoxContainer"]
+[node name="Panel" type="Panel" parent="Levels/VBoxContainer" unique_id=268941775]
 custom_minimum_size = Vector2(1040, 500)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxTexture_wrovc")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Levels/VBoxContainer/Panel"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Levels/VBoxContainer/Panel" unique_id=1084577989]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -1052,7 +1076,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 34
 
-[node name="Button" type="Button" parent="Levels/VBoxContainer/Panel/HBoxContainer"]
+[node name="Button" type="Button" parent="Levels/VBoxContainer/Panel/HBoxContainer" unique_id=582475490]
 custom_minimum_size = Vector2(300, 420)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -1063,7 +1087,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_in15a")
 theme_override_styles/disabled = SubResource("StyleBoxTexture_umoh2")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_kms1b")
 
-[node name="MarginContainer" type="MarginContainer" parent="Levels/VBoxContainer/Panel/HBoxContainer/Button"]
+[node name="MarginContainer" type="MarginContainer" parent="Levels/VBoxContainer/Panel/HBoxContainer/Button" unique_id=1673364369]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1075,20 +1099,21 @@ theme_override_constants/margin_top = 32
 theme_override_constants/margin_right = 32
 theme_override_constants/margin_bottom = 32
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Levels/VBoxContainer/Panel/HBoxContainer/Button/MarginContainer"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Levels/VBoxContainer/Panel/HBoxContainer/Button/MarginContainer" unique_id=2037574265]
 self_modulate = Color(0.57925385, 1.973361e-06, 3.85046e-07, 1)
 position = Vector2(150, 145)
 scale = Vector2(2.51, 2.51)
 sprite_frames = SubResource("SpriteFrames_umoeb")
-animation = &"Spin"
+animation = &"Idle"
+frame_progress = 1.0
 offset = Vector2(0.845, 0)
 
-[node name="TextureRect" type="TextureRect" parent="Levels/VBoxContainer/Panel/HBoxContainer/Button/MarginContainer"]
+[node name="TextureRect" type="TextureRect" parent="Levels/VBoxContainer/Panel/HBoxContainer/Button/MarginContainer" unique_id=782635134]
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="Label" type="Label" parent="Levels/VBoxContainer/Panel/HBoxContainer/Button/MarginContainer"]
+[node name="Label" type="Label" parent="Levels/VBoxContainer/Panel/HBoxContainer/Button/MarginContainer" unique_id=722824391]
 custom_minimum_size = Vector2(200, 120)
 layout_mode = 2
 size_flags_vertical = 8
@@ -1101,7 +1126,7 @@ text = "Single Player Game Mode "
 horizontal_alignment = 1
 autowrap_mode = 1
 
-[node name="Button2" type="Button" parent="Levels/VBoxContainer/Panel/HBoxContainer"]
+[node name="Button2" type="Button" parent="Levels/VBoxContainer/Panel/HBoxContainer" unique_id=2037243062]
 custom_minimum_size = Vector2(300, 420)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -1112,7 +1137,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_in15a")
 theme_override_styles/disabled = SubResource("StyleBoxTexture_umoh2")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_kms1b")
 
-[node name="MarginContainer" type="MarginContainer" parent="Levels/VBoxContainer/Panel/HBoxContainer/Button2"]
+[node name="MarginContainer" type="MarginContainer" parent="Levels/VBoxContainer/Panel/HBoxContainer/Button2" unique_id=847559335]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1124,7 +1149,7 @@ theme_override_constants/margin_top = 32
 theme_override_constants/margin_right = 32
 theme_override_constants/margin_bottom = 32
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Levels/VBoxContainer/Panel/HBoxContainer/Button2/MarginContainer"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Levels/VBoxContainer/Panel/HBoxContainer/Button2/MarginContainer" unique_id=1493767875]
 self_modulate = Color(0.57925385, 1.973361e-06, 3.85046e-07, 1)
 texture_filter = 1
 position = Vector2(72, 40)
@@ -1133,12 +1158,12 @@ sprite_frames = SubResource("SpriteFrames_mocuv")
 animation = &"Spin"
 centered = false
 
-[node name="TextureRect" type="TextureRect" parent="Levels/VBoxContainer/Panel/HBoxContainer/Button2/MarginContainer"]
+[node name="TextureRect" type="TextureRect" parent="Levels/VBoxContainer/Panel/HBoxContainer/Button2/MarginContainer" unique_id=1387455079]
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="Label" type="Label" parent="Levels/VBoxContainer/Panel/HBoxContainer/Button2/MarginContainer"]
+[node name="Label" type="Label" parent="Levels/VBoxContainer/Panel/HBoxContainer/Button2/MarginContainer" unique_id=1515271858]
 custom_minimum_size = Vector2(200, 120)
 layout_mode = 2
 size_flags_vertical = 8
@@ -1151,7 +1176,7 @@ text = "Endless Mode "
 horizontal_alignment = 1
 autowrap_mode = 1
 
-[node name="Button3" type="Button" parent="Levels/VBoxContainer/Panel/HBoxContainer"]
+[node name="Button3" type="Button" parent="Levels/VBoxContainer/Panel/HBoxContainer" unique_id=1886204884]
 custom_minimum_size = Vector2(300, 420)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -1162,7 +1187,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_in15a")
 theme_override_styles/disabled = SubResource("StyleBoxTexture_umoh2")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_kms1b")
 
-[node name="MarginContainer" type="MarginContainer" parent="Levels/VBoxContainer/Panel/HBoxContainer/Button3"]
+[node name="MarginContainer" type="MarginContainer" parent="Levels/VBoxContainer/Panel/HBoxContainer/Button3" unique_id=1989447375]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1174,7 +1199,7 @@ theme_override_constants/margin_top = 32
 theme_override_constants/margin_right = 32
 theme_override_constants/margin_bottom = 32
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Levels/VBoxContainer/Panel/HBoxContainer/Button3/MarginContainer"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Levels/VBoxContainer/Panel/HBoxContainer/Button3/MarginContainer" unique_id=400695192]
 self_modulate = Color(0.57925385, 1.973361e-06, 3.85046e-07, 1)
 position = Vector2(160, 250)
 scale = Vector2(-3.5, -3.5)
@@ -1185,12 +1210,12 @@ offset = Vector2(-20, 0)
 flip_h = true
 flip_v = true
 
-[node name="TextureRect" type="TextureRect" parent="Levels/VBoxContainer/Panel/HBoxContainer/Button3/MarginContainer"]
+[node name="TextureRect" type="TextureRect" parent="Levels/VBoxContainer/Panel/HBoxContainer/Button3/MarginContainer" unique_id=739083541]
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="Label" type="Label" parent="Levels/VBoxContainer/Panel/HBoxContainer/Button3/MarginContainer"]
+[node name="Label" type="Label" parent="Levels/VBoxContainer/Panel/HBoxContainer/Button3/MarginContainer" unique_id=677931968]
 custom_minimum_size = Vector2(200, 120)
 layout_mode = 2
 size_flags_vertical = 8
@@ -1203,7 +1228,219 @@ text = "Training"
 horizontal_alignment = 1
 autowrap_mode = 1
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="LevelsSP" type="MarginContainer" parent="." unique_id=1617726210]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LevelsSP" unique_id=559476867]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 8
+
+[node name="Separator2" type="Control" parent="LevelsSP/VBoxContainer" unique_id=2078256724]
+layout_mode = 2
+
+[node name="Separator3" type="Control" parent="LevelsSP/VBoxContainer" unique_id=1982312526]
+layout_mode = 2
+
+[node name="Separator4" type="Control" parent="LevelsSP/VBoxContainer" unique_id=11556864]
+layout_mode = 2
+
+[node name="Separator" type="Control" parent="LevelsSP/VBoxContainer" unique_id=60790013]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="LevelsSP/VBoxContainer" unique_id=870815910]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.033853278, 0.033853278, 0.033853274, 1)
+theme_override_colors/font_outline_color = Color(0.21568628, 0.21568628, 0.21568628, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("10_hnvtc")
+theme_override_font_sizes/font_size = 64
+text = "Level Select"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="LevelsSP/VBoxContainer" unique_id=2027371052]
+custom_minimum_size = Vector2(1040, 500)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_wrovc")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="LevelsSP/VBoxContainer/Panel" unique_id=1096378141]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 34
+
+[node name="Button" type="Button" parent="LevelsSP/VBoxContainer/Panel/HBoxContainer" unique_id=289114581]
+custom_minimum_size = Vector2(300, 420)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_hnvtc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_1wtt6")
+theme_override_styles/hover = SubResource("StyleBoxTexture_in15a")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_umoh2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kms1b")
+
+[node name="MarginContainer" type="MarginContainer" parent="LevelsSP/VBoxContainer/Panel/HBoxContainer/Button" unique_id=540478966]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="LevelsSP/VBoxContainer/Panel/HBoxContainer/Button/MarginContainer" unique_id=1288487674]
+self_modulate = Color(0.7533901, 8.904189e-07, 5.7756904e-07, 1)
+position = Vector2(150, 145)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_adf70")
+animation = &"Idle"
+frame = 2
+frame_progress = 0.3311948
+offset = Vector2(0.845, 0)
+
+[node name="TextureRect" type="TextureRect" parent="LevelsSP/VBoxContainer/Panel/HBoxContainer/Button/MarginContainer" unique_id=2102560119]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="LevelsSP/VBoxContainer/Panel/HBoxContainer/Button/MarginContainer" unique_id=1027780489]
+custom_minimum_size = Vector2(200, 120)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.21568628, 0.21568628, 0.21568628, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("10_hnvtc")
+theme_override_font_sizes/font_size = 45
+text = "Level I"
+horizontal_alignment = 1
+autowrap_mode = 1
+
+[node name="Button2" type="Button" parent="LevelsSP/VBoxContainer/Panel/HBoxContainer" unique_id=1370760959]
+custom_minimum_size = Vector2(300, 420)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_hnvtc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_1wtt6")
+theme_override_styles/hover = SubResource("StyleBoxTexture_in15a")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_umoh2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kms1b")
+
+[node name="MarginContainer" type="MarginContainer" parent="LevelsSP/VBoxContainer/Panel/HBoxContainer/Button2" unique_id=1103750929]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="LevelsSP/VBoxContainer/Panel/HBoxContainer/Button2/MarginContainer" unique_id=1421820894]
+self_modulate = Color(0.57925385, 1.973361e-06, 3.85046e-07, 1)
+texture_filter = 1
+position = Vector2(72, 40)
+scale = Vector2(1.9, 1.9)
+sprite_frames = SubResource("SpriteFrames_mocuv")
+animation = &"Spin"
+centered = false
+
+[node name="TextureRect" type="TextureRect" parent="LevelsSP/VBoxContainer/Panel/HBoxContainer/Button2/MarginContainer" unique_id=407384482]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="LevelsSP/VBoxContainer/Panel/HBoxContainer/Button2/MarginContainer" unique_id=603631559]
+custom_minimum_size = Vector2(200, 120)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.21568628, 0.21568628, 0.21568628, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("10_hnvtc")
+theme_override_font_sizes/font_size = 45
+text = "Level II"
+horizontal_alignment = 1
+autowrap_mode = 1
+
+[node name="Button3" type="Button" parent="LevelsSP/VBoxContainer/Panel/HBoxContainer" unique_id=187596424]
+custom_minimum_size = Vector2(300, 420)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_hnvtc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_1wtt6")
+theme_override_styles/hover = SubResource("StyleBoxTexture_in15a")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_umoh2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kms1b")
+
+[node name="MarginContainer" type="MarginContainer" parent="LevelsSP/VBoxContainer/Panel/HBoxContainer/Button3" unique_id=1565524800]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="LevelsSP/VBoxContainer/Panel/HBoxContainer/Button3/MarginContainer" unique_id=570862330]
+self_modulate = Color(0.57925385, 1.973361e-06, 3.85046e-07, 1)
+position = Vector2(160, 250)
+scale = Vector2(-3.5, -3.5)
+sprite_frames = SubResource("SpriteFrames_4pw7p")
+animation = &"Bleed"
+centered = false
+offset = Vector2(-20, 0)
+flip_h = true
+flip_v = true
+
+[node name="TextureRect" type="TextureRect" parent="LevelsSP/VBoxContainer/Panel/HBoxContainer/Button3/MarginContainer" unique_id=902054014]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="LevelsSP/VBoxContainer/Panel/HBoxContainer/Button3/MarginContainer" unique_id=299991502]
+custom_minimum_size = Vector2(200, 120)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.21568628, 0.21568628, 0.21568628, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("10_hnvtc")
+theme_override_font_sizes/font_size = 45
+text = "Level III"
+horizontal_alignment = 1
+autowrap_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2096557128]
 process_mode = 3
 material = SubResource("ShaderMaterial_hnvtc")
 layout_mode = 1

@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://dmjijesj0wq0w"]
+
+[ext_resource type="Texture2D" uid="uid://drnqq8fndh8cl" path="res://GRAPHICS/SPRITES/ENVIROMENT/hdb6a0.png" id="1_epkld"]
+[ext_resource type="Texture2D" uid="uid://bwbtjcm3v5pao" path="res://GRAPHICS/SPRITES/ENVIROMENT/hdb3a0.png" id="2_v2edh"]
+[ext_resource type="Texture2D" uid="uid://disyi6i6nv618" path="res://GRAPHICS/SPRITES/ENVIROMENT/hdb2a0.png" id="3_78ev4"]
+[ext_resource type="AudioStream" uid="uid://cw0v324g6j8m" path="res://GRAPHICS/SOUNDS/enemy_pain.wav" id="4_epkld"]
+[ext_resource type="Texture2D" uid="uid://b8jqj56uc8xim" path="res://GRAPHICS/SPRITES/ENVIROMENT/hdb1a0.png" id="4_epuet"]
+[ext_resource type="Texture2D" uid="uid://dwtl2jcyy3en2" path="res://GRAPHICS/SPRITES/ENVIROMENT/hdb4a0.png" id="5_f5yeu"]
+[ext_resource type="Texture2D" uid="uid://bej2l5r0wixui" path="res://GRAPHICS/SPRITES/ENVIROMENT/hdb5a0.png" id="6_fvuin"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lwu0x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_epkld")
+}],
+"loop": true,
+"name": &"Death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_v2edh")
+}],
+"loop": false,
+"name": &"Half",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_78ev4")
+}],
+"loop": false,
+"name": &"Hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_epuet")
+}],
+"loop": false,
+"name": &"Normal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_f5yeu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fvuin")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fvuin")
+}],
+"loop": true,
+"name": &"Spine",
+"speed": 1.0
+}]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tnu6t"]
+size = Vector3(1, 2.6000001, 1)
+
+[node name="Corpse" type="CharacterBody3D" unique_id=1201777745 groups=["ENEMY"]]
+collision_layer = 129
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1214568881]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 1.8000001, 0)
+billboard = 2
+texture_filter = 2
+sprite_frames = SubResource("SpriteFrames_lwu0x")
+animation = &"Death"
+frame_progress = 0.07240834
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=898979949]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.35, 0)
+shape = SubResource("BoxShape3D_tnu6t")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=287259427]
+stream = ExtResource("4_epkld")

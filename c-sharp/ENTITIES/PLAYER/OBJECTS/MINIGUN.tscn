@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bqsekjgv0if4f"]
+[gd_scene format=3 uid="uid://bqsekjgv0if4f"]
 
 [ext_resource type="Script" uid="uid://cjpfd8odx4c6s" path="res://ENTITIES/PLAYER/OBJECTS/Minigun.cs" id="1_hy4qc"]
 [ext_resource type="Texture2D" uid="uid://cn4rhnd626b7n" path="res://GRAPHICS/SPRITES/WEAPONS/chgga0.png" id="2_3bf2o"]
@@ -42,10 +42,10 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="MINIGUN" type="Node3D"]
+[node name="MINIGUN" type="Node3D" unique_id=1797785798]
 script = ExtResource("1_hy4qc")
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1866770685]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -54,7 +54,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="GUN" type="AnimatedSprite2D" parent="CenterContainer"]
+[node name="GUN" type="AnimatedSprite2D" parent="CenterContainer" unique_id=814994254]
 texture_filter = 1
 rotation = -3.1415925
 scale = Vector2(2.5, 2.5)
@@ -65,7 +65,7 @@ offset = Vector2(-57, 0)
 flip_h = true
 flip_v = true
 
-[node name="FIRE" type="AnimatedSprite2D" parent="CenterContainer"]
+[node name="FIRE" type="AnimatedSprite2D" parent="CenterContainer" unique_id=1372233385]
 visible = false
 texture_filter = 1
 scale = Vector2(2.5, 2.5)
@@ -74,5 +74,5 @@ animation = &"FIRE"
 frame_progress = 0.8888067
 offset = Vector2(0, -79)
 
-[node name="RayCast3D" type="RayCast3D" parent="."]
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=332938388]
 target_position = Vector3(0, 0, -100)

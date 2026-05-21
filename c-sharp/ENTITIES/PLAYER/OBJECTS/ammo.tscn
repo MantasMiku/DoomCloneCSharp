@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bgm8b6am8n31r"]
+
+[ext_resource type="Texture2D" uid="uid://cw3ldp3cfqyqp" path="res://GRAPHICS/SPRITES/PICKUPS/ammoa0.png" id="1_62g1w"]
+[ext_resource type="Script" uid="uid://bpyyjue2h786h" path="res://ENTITIES/PLAYER/OBJECTS/PickUps.cs" id="1_yl3oy"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_yl3oy"]
+radius = 0.75
+
+[node name="AMMO" type="Node3D" unique_id=1643986243]
+script = ExtResource("1_yl3oy")
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1470532416]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("1_62g1w")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=890623586]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1327294621]
+shape = SubResource("SphereShape3D_yl3oy")

@@ -1,0 +1,44 @@
+[gd_scene format=4 uid="uid://bt82tg43w0oc6"]
+
+[ext_resource type="Script" uid="uid://cb1x8ei7m0xbh" path="res://Models/Enviroment/Door.cs" id="1_ikvx8"]
+[ext_resource type="Material" uid="uid://5rbxjsnru8dx" path="res://trenchbroom/textures/door11_1.tres" id="1_psvtx"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_lkr5q"]
+_surfaces = [{
+"aabb": AABB(-0.25, -1.75, -1.125, 0.5, 3.5, 2.25),
+"attribute_data": PackedByteArray("q6oCQAAAoMAzMwtAAACgwDMzC0AAAIDAq6oCQAAAgMCambHBAACAwGZmtsEAAIDAZma2wQAAoMCambHBAACgwHd3scEFAADAd3exweW27b9ERLbB5bbtv0REtsEFAADAd3exwY4kCUBERLbBjiQJQEREtsH3//8/d3exwff//z+ambFBAACgwGZmtkEAAKDAZma2QQAAgMCambFBAACAwJqZAcAAAIDAIiIKwAAAgMAiIgrAAACgwJqZAcAAAKDA"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAACAAMABAAFAAYABAAGAAcACAAJAAoACAAKAAsADAANAA4ADAAOAA8AEAARABIAEAASABMAFAAVABYAFAAWABcA"),
+"material": ExtResource("1_psvtx"),
+"name": "door11_1",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AACAPgAA4D8AAJC/AACAvgAA4D8AAJC/AACAvgAA4L8AAJC/AACAPgAA4L8AAJC/AACAvgAA4L8AAJA/AACAvgAA4L8AAJC/AACAvgAA4D8AAJC/AACAvgAA4D8AAJA/AACAvgAA4L8AAJA/AACAPgAA4L8AAJA/AACAPgAA4L8AAJC/AACAvgAA4L8AAJC/AACAvgAA4D8AAJA/AACAvgAA4D8AAJC/AACAPgAA4D8AAJC/AACAPgAA4D8AAJA/AACAPgAA4D8AAJA/AACAPgAA4D8AAJC/AACAPgAA4L8AAJC/AACAPgAA4L8AAJA/AACAPgAA4L8AAJA/AACAvgAA4L8AAJA/AACAvgAA4D8AAJA/AACAPgAA4D8AAJA//////wAA/7//////AAD/v/////8AAP+//////wAA/78AAP9//3//vwAA/3//f/+/AAD/f/9//78AAP9//3//v/9/AAD/f/+//38AAP9//7//fwAA/3//v/9/AAD/f/+//3////9//7//f////3//v/9/////f/+//3////9//7////9//////////3//////////f/////////9///////9//3////+//3//f////7//f/9/////v/9//3////+/")
+}]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_jf6yg"]
+points = PackedVector3Array(0.25, 1.75, 1.125, 0.25, -1.75, 1.125, -0.25, 1.75, 1.125, -0.25, -1.75, 1.125, 0.25, 1.75, -1.125, 0.25, -1.75, -1.125, -0.25, 1.75, -1.125, -0.25, -1.75, -1.125)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ikvx8"]
+height = 3.5
+radius = 4.0
+
+[node name="DoorExit" type="Node3D" unique_id=1938656862]
+script = ExtResource("1_ikvx8")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=2070668504]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1.75, 0)
+
+[node name="entity_1_mesh_instance" type="MeshInstance3D" parent="StaticBody3D" unique_id=1130172613]
+mesh = SubResource("ArrayMesh_lkr5q")
+
+[node name="entity_1_brush_0_collision_shape" type="CollisionShape3D" parent="StaticBody3D" unique_id=647318398]
+shape = SubResource("ConvexPolygonShape3D_jf6yg")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1583189129]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=776356386]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75, 0)
+shape = SubResource("CylinderShape3D_ikvx8")

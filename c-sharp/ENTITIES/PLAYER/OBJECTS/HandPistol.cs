@@ -14,11 +14,15 @@ public partial class HandPistol : Node3D
         gun = GetNode<AnimatedSprite2D>("CenterContainer/GUN");
         ray = GetNode<RayCast3D>("RayCast3D");
         ray.SetProcess(false);
+       
     }
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
     {
+        if(PlayerStats.playerHealth <= 0)
+            return;
+            
 		if (!shoot)
         {
 			gun.Play("IDLE");
@@ -35,9 +39,10 @@ public partial class HandPistol : Node3D
         shoot = true;
         ray.SetProcess(true);
         var rayHit = ray.GetCollider();
-
         if (rayHit is Node3D node)
         {
+            GD.Print("Hit");
+            GD.Print(node.IsInGroup("ENEMY"));
             if (node.IsInGroup("ENEMY"))
             {
                 node.Call("TakeDamage", damage);

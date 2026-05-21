@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://j33a20u6k0xe"]
+[gd_scene format=3 uid="uid://j33a20u6k0xe"]
 
 [ext_resource type="Script" uid="uid://ccqvivi5lix7i" path="res://ENTITIES/PLAYER/OBJECTS/Shotgun.cs" id="1_t3rdo"]
 [ext_resource type="Texture2D" uid="uid://dybyixfeqnyn7" path="res://GRAPHICS/SPRITES/WEAPONS/shtga0.png" id="2_3ifde"]
@@ -53,10 +53,10 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="SHOTGUN" type="Node3D"]
+[node name="SHOTGUN" type="Node3D" unique_id=953157174]
 script = ExtResource("1_t3rdo")
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=716031689]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -65,7 +65,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="GUN" type="AnimatedSprite2D" parent="CenterContainer"]
+[node name="GUN" type="AnimatedSprite2D" parent="CenterContainer" unique_id=1487492546]
 texture_filter = 1
 position = Vector2(116, 0)
 rotation = -3.1415925
@@ -76,7 +76,7 @@ centered = false
 flip_h = true
 flip_v = true
 
-[node name="FIRE" type="AnimatedSprite2D" parent="CenterContainer"]
+[node name="FIRE" type="AnimatedSprite2D" parent="CenterContainer" unique_id=852488110]
 texture_filter = 1
 position = Vector2(5, -172)
 scale = Vector2(3, 3)
@@ -84,5 +84,5 @@ sprite_frames = SubResource("SpriteFrames_wh8ld")
 animation = &"FIRE"
 frame_progress = 0.74880064
 
-[node name="RayCast3D" type="RayCast3D" parent="."]
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=29923422]
 target_position = Vector3(0, 0, -100)

@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cfo2dm4w0kb81" path="res://ENTITIES/PLAYER/OBJECTS/MELE.tscn" id="5_h1hjn"]
 [ext_resource type="PackedScene" uid="uid://b02gm46pcxdsm" path="res://ENTITIES/PLAYER/OBJECTS/SUPERSHOTGUN.tscn" id="7_8nkts"]
 [ext_resource type="PackedScene" uid="uid://bqsekjgv0if4f" path="res://ENTITIES/PLAYER/OBJECTS/MINIGUN.tscn" id="8_aen1f"]
-[ext_resource type="PackedScene" uid="uid://bo20mpton5g3l" path="res://ENTITIES/PLAYER/OBJECTS/HAND_PISTOL.tscn" id="10_ojl7p"]
+[ext_resource type="PackedScene" uid="uid://bo20mpton5g3l" path="res://ENTITIES/PLAYER/OBJECTS/HAND_PISTOL.tscn" id="9_h1hjn"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_d5hcy"]
 
@@ -25,10 +25,15 @@ properties/2/path = NodePath("Camera/Weapons:position")
 properties/2/spawn = true
 properties/2/replication_mode = 1
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_h1hjn"]
+height = 1.0
+radius = 0.4
+
 [node name="TestPlayer" type="CharacterBody3D" unique_id=805073001 groups=["PLAYER"]]
 floor_stop_on_slope = false
-floor_max_angle = 0.75049156
-floor_snap_length = 0.3
+floor_constant_speed = true
+floor_max_angle = 0.87266463
+floor_snap_length = 0.2
 script = ExtResource("1_erogg")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=176203046]
@@ -48,6 +53,8 @@ MouseSensitivity = 0.2
 [node name="Weapons" type="Node3D" parent="Camera" unique_id=1047165589 groups=["WeaponsManager"]]
 script = ExtResource("4_4ragd")
 
+[node name="MELE" parent="Camera/Weapons" unique_id=2080656484 instance=ExtResource("5_h1hjn")]
+
 [node name="PISTOL" parent="Camera/Weapons" unique_id=1577699087 instance=ExtResource("3_srlde")]
 
 [node name="SHOTGUN" parent="Camera/Weapons" unique_id=399729193 instance=ExtResource("5_arrpv")]
@@ -56,9 +63,11 @@ script = ExtResource("4_4ragd")
 
 [node name="MINIGUN" parent="Camera/Weapons" unique_id=1834213693 instance=ExtResource("8_aen1f")]
 
-[node name="MELE" parent="Camera/Weapons" unique_id=2080656484 instance=ExtResource("5_h1hjn")]
+[node name="HAND_PISTOL" parent="Camera/Weapons" unique_id=1231676461 instance=ExtResource("9_h1hjn")]
 
-[node name="HAND_PISTOL" parent="Camera/Weapons" unique_id=692494473 instance=ExtResource("10_ojl7p")]
+[node name="SpotLight3D" type="SpotLight3D" parent="Camera" unique_id=2064417937]
+light_color = Color(0.99473184, 1, 0.80208963, 1)
+spot_range = 7.0
 
 [node name="SwitchTimer" type="Timer" parent="." unique_id=883790689]
 wait_time = 0.2
@@ -80,11 +89,32 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 2
 target_position = Vector3(0, -1.5, 0)
 
 [node name="LedgeRayDown" type="RayCast3D" parent="." unique_id=552585963]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 1.5, 0)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 1, 0)
 
 [node name="LedgeRayHeight" type="RayCast3D" parent="." unique_id=226691463]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2, -1)
-target_position = Vector3(0, -0.7, 0)
+target_position = Vector3(0, -1.5, 0)
 
 [node name="FloorRay" type="RayCast3D" parent="." unique_id=386423164]
 target_position = Vector3(0, -0.3, 0)
+
+[node name="SlideTimer" type="Timer" parent="." unique_id=165525060]
+wait_time = 0.1
+one_shot = true
+
+[node name="CeilingCheck" type="ShapeCast3D" parent="." unique_id=706660754]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
+shape = SubResource("CylinderShape3D_h1hjn")
+target_position = Vector3(0, 0, 0)
+
+[node name="CheckIfCanClimbUp" type="RayCast3D" parent="." unique_id=1722542056]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 4, 0)
+target_position = Vector3(0, -2, 0)
+
+[node name="CheckIfCanClimbMiddle" type="RayCast3D" parent="." unique_id=1761134599]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 3, 0)
+target_position = Vector3(0, -2, 0)
+
+[node name="WallJumpTimer" type="Timer" parent="." unique_id=903066571]
+wait_time = 0.1
+one_shot = true

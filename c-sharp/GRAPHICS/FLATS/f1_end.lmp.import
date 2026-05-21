@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.palette"
+type="Resource"
+uid="uid://ceiwfwme0ehq2"
+path="res://.godot/imported/f1_end.lmp-2cc9b1f122f44125e9d7903d48debb64.tres"
+
+[deps]
+
+source_file="res://GRAPHICS/FLATS/f1_end.lmp"
+dest_files=["res://.godot/imported/f1_end.lmp-2cc9b1f122f44125e9d7903d48debb64.tres"]
+
+[params]
+

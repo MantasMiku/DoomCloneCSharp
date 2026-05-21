@@ -1,4 +1,5 @@
 using Godot;
+using System;
 using System.Collections.Generic;
 
 public partial class Spider : CharacterBody3D
@@ -43,7 +44,7 @@ public partial class Spider : CharacterBody3D
     private int tryAttack = 2;
 
     // Stats
-    public int Health = 1000;
+    public int Health = 2000;
     private int damage = 10;
 
     // Minions
@@ -57,9 +58,27 @@ public partial class Spider : CharacterBody3D
     private float animSpeed = 8f;
     private Vector3 moveDirection = Vector3.Zero;
 
+    AudioStreamPlayer3D spiderWalkPlayer;
+    AudioStreamPlayer3D spiderShootPlayer;
+    AudioStreamPlayer3D spiderPlayer;
+    int scoreValue = 800;
+
     // Godot lifecycle
     public override void _Ready()
     {
+        spiderPlayer = new AudioStreamPlayer3D();
+        AddChild(spiderPlayer);
+		spiderWalkPlayer = new AudioStreamPlayer3D();
+        AddChild(spiderWalkPlayer);
+        spiderShootPlayer = new AudioStreamPlayer3D();
+        AddChild(spiderShootPlayer);
+
+        spiderWalkPlayer.Stream = GD.Load<AudioStream>("res://GRAPHICS/SOUNDS/SPIDERDEMON/WALK.wav");
+        
+        spiderPlayer.UnitSize = 3;
+        spiderWalkPlayer.UnitSize = 3;
+        spiderShootPlayer.UnitSize = 5;
+
         AddToGroup("Minions");
         InitializeNodes();
         ConnectSignals();
@@ -74,6 +93,23 @@ public partial class Spider : CharacterBody3D
         UpdateAnimations();
         UpdateMovement(delta);
         MoveAndSlide();
+
+        bool canPlayWalkSound = Velocity.Length() > 0.1f && !isHit && !attack;
+
+		if (canPlayWalkSound)
+		{
+			if (!spiderWalkPlayer.Playing)
+			{
+				spiderWalkPlayer.Play();
+			}
+		}
+		else
+		{
+			if (spiderWalkPlayer.Playing)
+			{
+				spiderWalkPlayer.Stop();
+			}
+		}
     }
 
     // Initialization
@@ -97,12 +133,20 @@ public partial class Spider : CharacterBody3D
         walkTimer.Timeout += () => isStateActive = false;
         attackTimer.Timeout += OnAttackTimeout;
         spawnTimer.Timeout += () => canSpawn = true;
+        spawnTimer.Timeout += onSpawnTimer;
         deathTimer.Timeout += QueueFree;
         shootTimer.Timeout += OnShootCooldown;
 
     }
 
+    private void onSpawnTimer()
+    {
+        spiderPlayer.Stream = GD.Load<AudioStream>("res://GRAPHICS/SOUNDS/SPIDERDEMON/ACTIVE.wav");
+        spiderPlayer.Play();
+    }
+
     // Player detection and tracking
+
     private bool FindNearestPlayer()
     {
         var players = GetTree().GetNodesInGroup("PLAYER");
@@ -135,6 +179,8 @@ public partial class Spider : CharacterBody3D
         if (body is TestPlayer testPlayer && !testPlayer.crouchPressed && !playerDetected)
         {
             playerDetected = true;
+            // spiderPlayer.Stream = GD.Load<AudioStream>("res://GRAPHICS/SOUNDS/SPIDERDEMON/ALERT.wav");
+            // spiderPlayer.Play();
             canSpawn = true;
         }
             
@@ -488,6 +534,9 @@ public partial class Spider : CharacterBody3D
         {
             dead = true;
             anim.Play("DEATH");
+            PlayerStats.ChangeScore(scoreValue);
+            spiderPlayer.Stream = GD.Load<AudioStream>("res://GRAPHICS/SOUNDS/SPIDERDEMON/DEATH.wav");
+            spiderPlayer.Play();
         }
         
         GetNode<CollisionShape3D>("CollisionShape3D").Disabled = true;
@@ -506,7 +555,8 @@ public partial class Spider : CharacterBody3D
     private void OnShootCooldown()
     {
         var rayHit = ray.GetCollider();
-
+        spiderShootPlayer.Stream = GD.Load<AudioStream>("res://GRAPHICS/SOUNDS/dsshotgn.wav");
+        spiderShootPlayer.Play();
         if (rayHit is TestPlayer testPlayer)
         {
             GD.Print(testPlayer.crouchSlide);
@@ -539,7 +589,15 @@ public partial class Spider : CharacterBody3D
         
         if (Health <= 0)
             PlayDeathAnimation();
-        else if (damageAmount > 20)
+        else if (damageAmount > 20 )
+        {
             isHit = true;
+            if(Health > 0)
+            {
+                spiderPlayer.Stream = GD.Load<AudioStream>("res://GRAPHICS/SOUNDS/SPIDERDEMON/HURT.wav");
+                spiderPlayer.Play();
+            }
+        }
+            
     }
 }

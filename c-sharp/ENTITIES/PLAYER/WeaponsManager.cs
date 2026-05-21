@@ -15,6 +15,8 @@ public partial class WeaponsManager : Node3D
 
 	public override void _Process(double delta)
 	{
+		if(PlayerStats.playerHealth <= 0)
+            return;
 		// Count down the scroll cooldown
 		if (scrollTimer > 0)
 			scrollTimer -= (float)delta;
@@ -57,6 +59,9 @@ public partial class WeaponsManager : Node3D
 	}
 	public override void _UnhandledInput(InputEvent @event)
     {
+		if(PlayerStats.playerHealth <= 0)
+            return;
+			
         if (weapons[currentWeaponIndex].GetNodeOrNull<AnimatedSprite2D>("CenterContainer/GUN") is AnimatedSprite2D anim)
         {
 			if (anim.Animation == "IDLE")

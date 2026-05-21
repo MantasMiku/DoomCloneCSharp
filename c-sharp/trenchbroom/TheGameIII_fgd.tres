@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDFile" format=3 uid="uid://0gqp3fxskf22"]
+
+[ext_resource type="Script" uid="uid://drlmgulwbjwqu" path="res://addons/func_godot/src/fgd/func_godot_fgd_file.gd" id="1_5q57c"]
+[ext_resource type="Resource" uid="uid://crgpdahjaj" path="res://addons/func_godot/fgd/func_godot_fgd.tres" id="1_o0rex"]
+[ext_resource type="Resource" uid="uid://mvadjpxnvo2e" path="res://trenchbroom/fgd/point/func_lamp.tres" id="2_fa0ey"]
+[ext_resource type="Resource" uid="uid://didgjsglmbgrj" path="res://trenchbroom/fgd/solid/func_moving_object.tres" id="3_4l5r4"]
+
+[resource]
+script = ExtResource("1_5q57c")
+fgd_name = "TheGameIII"
+base_fgd_files = Array[Resource]([ExtResource("1_o0rex")])
+entity_definitions = Array[Resource]([ExtResource("2_fa0ey"), ExtResource("3_4l5r4")])
+metadata/_custom_type_script = "uid://drlmgulwbjwqu"

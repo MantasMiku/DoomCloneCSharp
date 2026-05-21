@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://dcn6c7iehrjjc"]
+[gd_scene format=3 uid="uid://dcn6c7iehrjjc"]
 
 [ext_resource type="Script" uid="uid://cyovmavpeefed" path="res://ENTITIES/ENEMIES/SPIDER/Spider.cs" id="1_3uicj"]
 [ext_resource type="Texture2D" uid="uid://brr7k2nomu38e" path="res://GRAPHICS/SPRITES/ENEMIES/SPIDER/spidg1.png" id="2_xnsah"]
@@ -327,14 +327,14 @@ properties/1/replication_mode = 1
 height = 24.724
 radius = 50.0
 
-[node name="SPIDER" type="CharacterBody3D" groups=["ENEMY"]]
+[node name="SPIDER" type="CharacterBody3D" unique_id=586281356 groups=["ENEMY"]]
 script = ExtResource("1_3uicj")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=796079205]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1106935, 0)
 shape = SubResource("CylinderShape3D_52ejq")
 
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=241820883]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 2, 0)
 centered = false
 offset = Vector2(-92, -50)
@@ -344,48 +344,48 @@ texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_ijlb6")
 animation = &"IDLE"
 
-[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=121656931]
 avoidance_enabled = true
 radius = 3.0
 keep_y_velocity = false
 
-[node name="Direction" parent="." instance=ExtResource("48_yc7oj")]
+[node name="Direction" parent="." unique_id=1573104318 instance=ExtResource("48_yc7oj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 visible = false
 
-[node name="WalkTimer" type="Timer" parent="."]
+[node name="WalkTimer" type="Timer" parent="." unique_id=1275060343]
 wait_time = 4.0
 one_shot = true
 
-[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=821754960]
 replication_config = SubResource("SceneReplicationConfig_apovx")
 
-[node name="RayCast3D" type="RayCast3D" parent="."]
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=1382964697]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.042895794, 1.9690197, 0)
 target_position = Vector3(0, 0, -100)
 
-[node name="AttackTimer" type="Timer" parent="."]
+[node name="AttackTimer" type="Timer" parent="." unique_id=626648637]
 wait_time = 3.0
 one_shot = true
 
-[node name="SpawnTimer" type="Timer" parent="."]
-wait_time = 8.0
+[node name="SpawnTimer" type="Timer" parent="." unique_id=209661001]
+wait_time = 20.0
 one_shot = true
 
-[node name="DetectPlayer" type="Area3D" parent="." groups=["ENEMY"]]
+[node name="DetectPlayer" type="Area3D" parent="." unique_id=414823108 groups=["ENEMY"]]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="DetectPlayer"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DetectPlayer" unique_id=58012322]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.5, 0)
 shape = SubResource("CylinderShape3D_jy45n")
 
-[node name="ShootTimer" type="Timer" parent="."]
+[node name="ShootTimer" type="Timer" parent="." unique_id=74738445]
 wait_time = 0.2
 one_shot = true
 
-[node name="DeathTimer" type="Timer" parent="."]
+[node name="DeathTimer" type="Timer" parent="." unique_id=697170453]
 wait_time = 10.0
 one_shot = true
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=1434753366]
 wait_time = 0.5
 one_shot = true

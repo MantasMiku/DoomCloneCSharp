@@ -19,8 +19,24 @@ public partial class Mele : Node3D
     float speedScale = 1;
     bool enemyEntered = false;
     int damage = 30;
+    private AudioStreamPlayer ShootSoundPlayer1;
+    private AudioStreamPlayer ShootSoundPlayer2;
+    private AudioStreamPlayer ShootSoundPlayer3;
+    private AudioStreamPlayer ShootSoundPlayer4;
+    private AudioStream ShootSound;
 	public override void _Ready()
     {
+        ShootSoundPlayer1 = new AudioStreamPlayer();
+        AddChild(ShootSoundPlayer1);
+        ShootSoundPlayer2 = new AudioStreamPlayer();
+        AddChild(ShootSoundPlayer2);
+        ShootSoundPlayer3 = new AudioStreamPlayer();
+        AddChild(ShootSoundPlayer3);
+        ShootSoundPlayer4 = new AudioStreamPlayer();
+        AddChild(ShootSoundPlayer4);
+
+		ShootSound = GD.Load<AudioStream>("res://GRAPHICS/SOUNDS/dspunch.wav");
+
         gun = GetNode<AnimatedSprite2D>("CenterContainer/GUN");
         gun2 = GetNode<AnimatedSprite2D>("CenterContainer/GUN2");
         gun3 = GetNode<AnimatedSprite2D>("CenterContainer/GUN3");
@@ -39,7 +55,8 @@ public partial class Mele : Node3D
     {
         if (body.IsInGroup("ENEMY"))
         {
-            enemiesInHitbox.Add(body);
+            GD.Print("Exited " + enemiesInHitbox);
+            enemiesInHitbox.Remove(body);
         }
     }
 
@@ -48,12 +65,16 @@ public partial class Mele : Node3D
     {
         if (body.IsInGroup("ENEMY"))
         {
-            enemiesInHitbox.Remove(body);
+            GD.Print("Entered " + enemiesInHitbox);
+            
+            enemiesInHitbox.Add(body);
         }
     }
 
     public override void _Process(double delta)
     {
+        if(PlayerStats.playerHealth <= 0)
+            return;
 		if (!shoot)
         {
 			hand.Visible = true;
@@ -81,14 +102,14 @@ public partial class Mele : Node3D
             {
                 ThirdPunch();
                 speedScale = 1.5f;
-                //damage = 120;
+                //damage = 90;
             }
                 
             if (timer >= 12)
             {
                 FourthPunch();
                 speedScale = 1.8f;
-                //damage = 130;
+                //damage = 100;
             }
                 
         }
@@ -119,7 +140,10 @@ public partial class Mele : Node3D
         {
             if (enemyNode.IsInGroup("ENEMY"))// cast to your Enemy script
             {
-                enemyNode.Call("TakeDamage", damage);            
+                ShootSoundPlayer1.Stream = ShootSound;
+                ShootSoundPlayer1.Play();
+                enemyNode.Call("TakeDamage", damage);   
+                GD.Print(damage);         
             }
         }
 		await ToSignal(gun, AnimationPlayer.SignalName.AnimationFinished);
@@ -136,6 +160,8 @@ public partial class Mele : Node3D
         {
             if (enemyNode.IsInGroup("ENEMY"))// cast to your Enemy script
             {
+                ShootSoundPlayer2.Stream = ShootSound;
+                ShootSoundPlayer2.Play();
                 enemyNode.Call("TakeDamage", damage);            
             }
         }
@@ -151,6 +177,8 @@ public partial class Mele : Node3D
         {
             if (enemyNode.IsInGroup("ENEMY"))// cast to your Enemy script
             {
+                ShootSoundPlayer3.Stream = ShootSound;
+                ShootSoundPlayer3.Play();
                 enemyNode.Call("TakeDamage", damage);            
             }
         }
@@ -166,6 +194,8 @@ public partial class Mele : Node3D
         {
             if (enemyNode.IsInGroup("ENEMY"))// cast to your Enemy script
             {
+                ShootSoundPlayer4.Stream = ShootSound;
+                ShootSoundPlayer4.Play();
                 enemyNode.Call("TakeDamage", damage);            
             }
         }

@@ -16,20 +16,20 @@ bg_color = Color(0, 0, 0, 0.4392157)
 shader = ExtResource("3_fedow")
 shader_parameter/overlay = false
 shader_parameter/scanlines_opacity = 0.0
-shader_parameter/scanlines_width = 0.14400000684
-shader_parameter/grille_opacity = 0.3
+shader_parameter/scanlines_width = 0.0
+shader_parameter/grille_opacity = 0.0
 shader_parameter/resolution = Vector2(640, 480)
 shader_parameter/pixelate = true
 shader_parameter/roll = true
-shader_parameter/roll_speed = 100.0
-shader_parameter/roll_size = 0.0
-shader_parameter/roll_variation = 5.0
+shader_parameter/roll_speed = 10.0
+shader_parameter/roll_size = 0.50000002375
+shader_parameter/roll_variation = 2.50000011549012
 shader_parameter/distort_intensity = 0.05
 shader_parameter/noise_opacity = 0.150000007125
 shader_parameter/noise_speed = 5.0
 shader_parameter/static_noise_intensity = 0.06
-shader_parameter/aberration = 0.0050000477375000685
-shader_parameter/brightness = 1.4
+shader_parameter/aberration = 4.7499999933364734e-08
+shader_parameter/brightness = 1.305
 shader_parameter/discolor = true
 shader_parameter/warp_amount = 1.0
 shader_parameter/clip_warp = false
@@ -45,6 +45,184 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_v7amq")
+
+[node name="Score" type="Label" parent="." unique_id=2021804925]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -108.0
+offset_top = 48.0
+offset_right = 108.0
+offset_bottom = 88.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.48178947, 0.48178947, 0.48178947, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_hq0ne")
+theme_override_font_sizes/font_size = 48
+text = "1000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayerUI" type="MarginContainer" parent="." unique_id=1403547055]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -190.0
+offset_right = 190.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="PlayerUI" unique_id=1635224799]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="CrossHair" type="Sprite2D" parent="PlayerUI/CenterContainer" unique_id=113643853]
+texture = ExtResource("4_k31bo")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PlayerUI" unique_id=1633409634]
+layout_mode = 2
+theme_override_constants/separation = 290
+
+[node name="Control2" type="Control" parent="PlayerUI/HBoxContainer" unique_id=1061175082]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PlayerUI/HBoxContainer" unique_id=1928931257]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_constants/separation = 100
+
+[node name="Control2" type="Control" parent="PlayerUI/HBoxContainer/VBoxContainer" unique_id=55606944]
+layout_mode = 2
+
+[node name="Health" type="Label" parent="PlayerUI/HBoxContainer/VBoxContainer" unique_id=1198030397]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_hq0ne")
+theme_override_font_sizes/font_size = 64
+text = "100"
+
+[node name="Control" type="Control" parent="PlayerUI/HBoxContainer" unique_id=371406623]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PlayerUI/HBoxContainer" unique_id=1365111415]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="Ammo" type="Label" parent="PlayerUI/HBoxContainer/VBoxContainer2" unique_id=937658208]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.28485027, 0.28485027, 0.28485027, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_hq0ne")
+theme_override_font_sizes/font_size = 64
+text = "7x"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="WeaponIcon" type="Sprite2D" parent="PlayerUI/HBoxContainer/VBoxContainer2" unique_id=1305957697]
+visible = false
+position = Vector2(202, -91)
+scale = Vector2(2, 2)
+texture = ExtResource("6_gbubl")
+flip_h = true
+
+[node name="AmmoIcon" type="Sprite2D" parent="PlayerUI/HBoxContainer/VBoxContainer2" unique_id=621813063]
+position = Vector2(207, -52)
+scale = Vector2(2, 2)
+texture = ExtResource("7_gbbpg")
+
+[node name="Control3" type="Control" parent="PlayerUI/HBoxContainer" unique_id=868514781]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1086571754]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -371.0
+offset_bottom = 215.0
+grow_horizontal = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1312447066]
+layout_mode = 2
+theme_override_constants/separation = 32
+alignment = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=707808463]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Control2" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1323396838]
+layout_mode = 2
+
+[node name="Control3" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1264459581]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=805993770]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.21568628, 0.21568628, 0.21568628, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("4_hq0ne")
+theme_override_font_sizes/font_size = 32
+text = "sdsdsdsdsdsd"
+horizontal_alignment = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=687394544]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.21568628, 0.21568628, 0.21568628, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("4_hq0ne")
+theme_override_font_sizes/font_size = 32
+text = "sdsdsdsdsd"
+horizontal_alignment = 2
+
+[node name="Label3" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1895310332]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.21568628, 0.21568628, 0.21568628, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("4_hq0ne")
+theme_override_font_sizes/font_size = 32
+text = "sdsdsdsdsd"
+horizontal_alignment = 2
+
+[node name="Label4" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=2072276409]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.21568628, 0.21568628, 0.21568628, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("4_hq0ne")
+theme_override_font_sizes/font_size = 32
+text = "sdsdsdsdsd"
+horizontal_alignment = 2
+
+[node name="Control" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1571258576]
+layout_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=201112051]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 0, 0, 0.09019608)
 
 [node name="Pause" type="MarginContainer" parent="." unique_id=1888778839]
 layout_mode = 1
@@ -170,8 +348,7 @@ text = "Exit"
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="PlayerUI" type="MarginContainer" parent="." unique_id=1403547055]
-visible = false
+[node name="Death" type="MarginContainer" parent="." unique_id=630655203]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -179,77 +356,97 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="CenterContainer" type="CenterContainer" parent="PlayerUI" unique_id=1635224799]
+[node name="Panel" type="Panel" parent="Death" unique_id=1710077501]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_hq0ne")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Death" unique_id=73926529]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/separation = 16
+
+[node name="Separator2" type="Control" parent="Death/VBoxContainer" unique_id=131631031]
+layout_mode = 2
+
+[node name="Separator3" type="Control" parent="Death/VBoxContainer" unique_id=848174667]
+layout_mode = 2
+
+[node name="Separator4" type="Control" parent="Death/VBoxContainer" unique_id=568699510]
+layout_mode = 2
+
+[node name="Separator" type="Control" parent="Death/VBoxContainer" unique_id=1602330845]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Death/VBoxContainer" unique_id=446072138]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.21568628, 0.21568628, 0.21568628, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("2_6kn77")
+theme_override_font_sizes/font_size = 128
+text = "You Died"
+
+[node name="Separator5" type="Control" parent="Death/VBoxContainer" unique_id=1919307572]
+layout_mode = 2
+
+[node name="Separator6" type="Control" parent="Death/VBoxContainer" unique_id=1285937268]
+layout_mode = 2
+
+[node name="Separator7" type="Control" parent="Death/VBoxContainer" unique_id=331237487]
+layout_mode = 2
+
+[node name="Separator8" type="Control" parent="Death/VBoxContainer" unique_id=239321956]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Death/VBoxContainer" unique_id=206934208]
+modulate = Color(1, 1, 1, 0.7058824)
+custom_minimum_size = Vector2(180, 55)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme = ExtResource("3_2xura")
 
-[node name="CrossHair" type="Sprite2D" parent="PlayerUI/CenterContainer" unique_id=113643853]
-texture = ExtResource("4_k31bo")
-
-[node name="HBoxContainer" type="HBoxContainer" parent="PlayerUI" unique_id=1633409634]
-layout_mode = 2
-theme_override_constants/separation = 290
-
-[node name="Control2" type="Control" parent="PlayerUI/HBoxContainer" unique_id=1061175082]
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="PlayerUI/HBoxContainer" unique_id=1928931257]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 8
-theme_override_constants/separation = 100
-
-[node name="Control2" type="Control" parent="PlayerUI/HBoxContainer/VBoxContainer" unique_id=55606944]
-layout_mode = 2
-
-[node name="Health" type="Label" parent="PlayerUI/HBoxContainer/VBoxContainer" unique_id=1198030397]
-custom_minimum_size = Vector2(250, 0)
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 8
+[node name="Label" type="Label" parent="Death/VBoxContainer/Button" unique_id=298577037]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0.584534, 0.042526215, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("4_hq0ne")
-theme_override_font_sizes/font_size = 64
-text = "100"
-
-[node name="Control" type="Control" parent="PlayerUI/HBoxContainer" unique_id=371406623]
-layout_mode = 2
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="PlayerUI/HBoxContainer" unique_id=1365111415]
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 8
-
-[node name="Ammo" type="Label" parent="PlayerUI/HBoxContainer/VBoxContainer2" unique_id=937658208]
-custom_minimum_size = Vector2(250, 0)
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0.28485027, 0.28485027, 0.28485027, 1)
-theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("4_hq0ne")
-theme_override_font_sizes/font_size = 64
-text = "7x"
-horizontal_alignment = 2
+theme_override_colors/font_outline_color = Color(0.21568628, 0.21568628, 0.21568628, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("2_6kn77")
+theme_override_font_sizes/font_size = 44
+text = "Reborn"
+horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="WeaponIcon" type="Sprite2D" parent="PlayerUI/HBoxContainer/VBoxContainer2" unique_id=1305957697]
-visible = false
-position = Vector2(202, -91)
-scale = Vector2(2, 2)
-texture = ExtResource("6_gbubl")
-flip_h = true
-
-[node name="AmmoIcon" type="Sprite2D" parent="PlayerUI/HBoxContainer/VBoxContainer2" unique_id=621813063]
-position = Vector2(207, -52)
-scale = Vector2(2, 2)
-texture = ExtResource("7_gbbpg")
-
-[node name="Control3" type="Control" parent="PlayerUI/HBoxContainer" unique_id=868514781]
+[node name="Button3" type="Button" parent="Death/VBoxContainer" unique_id=1430168552]
+modulate = Color(1, 1, 1, 0.7058824)
+custom_minimum_size = Vector2(180, 55)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("3_2xura")
+
+[node name="Label" type="Label" parent="Death/VBoxContainer/Button3" unique_id=2063111941]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.21568628, 0.21568628, 0.21568628, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("2_6kn77")
+theme_override_font_sizes/font_size = 44
+text = "Exit"
+horizontal_alignment = 1
+vertical_alignment = 2
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=172104152]
 material = SubResource("ShaderMaterial_2xura")
