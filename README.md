@@ -5,4 +5,5 @@ This project may advance more than just a passion project but for now it is a to
 
 # How to run The GameIII
 
-Go to main project files find Export folder and run "The GameIII.exe"
+Install Godot 4.6 .NET version from official Godot website, import the project and press F5 or "Run Project" button.
+You can also export the project to and .exe file by using an export option.
